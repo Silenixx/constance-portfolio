@@ -1,76 +1,87 @@
 export default function Presentation() {
   return (
     <section className="page bio">
-      <header className="bio__header">
-        <img
-          src="/public/constance2.jpg"  // mets ton image ici (public/images/constance.jpg)
-          alt="Constance TAHAY"
-          className="bio__photo"
-        />
-        <div>
-          <h2>Constance TAHAY</h2>
-          <p className="bio__tagline">
-            Designer conceptrice d'outils
+
+      {/* En-tête + intro regroupés dans un panneau */}
+      <section className="bio__panel">
+        <header className="bio__header">
+          <img
+            src="/public/constance2.jpg"
+            alt="Constance TAHAY"
+            className="bio__photo"
+          />
+          <div>
+            <h2 className="bio__title">Constance TAHAY</h2>
+            <p className="bio__tagline">Designer conceptrice d'outils</p>
+            <div className="actions">
+              <a className="btn" href="/contact">Me contacter</a>
+              {/* <a className="btn btn--ghost" href="/cv.pdf" target="_blank" rel="noreferrer">Télécharger le CV</a> */}
+            </div>
+          </div>
+        </header>
+
+        <article className="bio__intro">
+          <p>
+            Je conçois des espaces (intérieurs et extérieurs), des scénographies et des objets
+            en mettant l’usage au centre. Mon travail croise pédagogie, matérialité et narration :
+            chaque projet doit être lisible, fonctionnel et durable.
           </p>
-        </div>
-      </header>
+          <p>
+            J’accompagne particuliers, collectivités et structures culturelles de la phase d’idée
+            jusqu’à la mise en œuvre : recherche, esquisses, maquettes, choix matériaux, plans et suivi.
+            Côté pédagogie, je développe des supports ludiques pour transmettre méthodes et savoir-faire.
+          </p>
+        </article>
+      </section>
 
-      <article className="bio__intro">
-        <p>
-          Je conçois des espaces (intérieurs et extérieurs), des scénographies et des objets
-          en mettant l’usage au centre. Mon travail croise pédagogie, matérialité et narration :
-          chaque projet doit être lisible, fonctionnel et durable.
-        </p>
-        <p>
-          J’accompagne particuliers, collectivités et structures culturelles de la phase d’idée
-          jusqu’à la mise en œuvre : recherche, esquisses, maquettes, choix matériaux, plans et suivi.
-          Côté pédagogie, je développe des supports ludiques pour transmettre méthodes et savoir-faire.
-        </p>
-      </article>
-
+      {/* Sections */}
       <section className="bio__section">
-        <h3>Parcours scolaire</h3>
+        <h3 className="section__title"><span>Parcours scolaire</span></h3>
         <ul className="timeline">
-          {/* TODO: remplace par tes vraies infos */}
           <li>
-            <span className="timeline__year">2021 — 2023</span>
+            <span className="timeline__year">2022 — 2024</span>
             <div>
-              <strong>Master (ou équivalent) – Design d’espaces</strong><br/>
-              École / Université — Ville
+              <strong>DNSEP, Design des milieux</strong><br/>
+              École nationale supérieure d’art et de design de Nancy
             </div>
           </li>
           <li>
-            <span className="timeline__year">2018 — 2021</span>
+            <span className="timeline__year">2019 — 2022</span>
             <div>
-              <strong>Licence / DNMADE – Design</strong><br/>
-              Établissement — Ville
+              <strong>DNA design d’objet & espace</strong><br/>
+              ÉSAD de Reims
             </div>
           </li>
           <li>
             <span className="timeline__year">2017</span>
             <div>
-              <strong>Baccalauréat</strong><br/>
-              Lycée — Ville
+              <strong>CPES-CAAP</strong><br/>Lycée — Ville
+            </div>
+          </li>
+          <li>
+            <span className="timeline__year">2017</span>
+            <div>
+              <strong>Baccalauréat scientifique</strong><br/>
+              Ensemble scolaire Notre Dame Saint Joseph
             </div>
           </li>
         </ul>
       </section>
 
       <section className="bio__section">
-        <h3>Parcours professionnel</h3>
+        <h3 className="section__title"><span>Parcours professionnel</span></h3>
         <ul className="timeline">
-          {/* TODO: remplace par tes vraies missions */}
           <li>
             <span className="timeline__year">2024 — Aujourd’hui</span>
             <div>
-              <strong>Designer d’espaces & d’objets – Indépendante</strong><br/>
+              <strong>Designer d’espaces & d’objets — Indépendante</strong><br/>
               Conception d’intérieurs, scénographies, signalétique, mobiliers sur mesure.
             </div>
           </li>
           <li>
             <span className="timeline__year">2022 — 2024</span>
             <div>
-              <strong>Designer – Agence / Collectivité</strong><br/>
+              <strong>Designer — Agence / Collectivité</strong><br/>
               AMO, plans, rendus, suivi de fabrication, coordination corps d’état.
             </div>
           </li>
@@ -85,7 +96,7 @@ export default function Presentation() {
       </section>
 
       <section className="bio__section">
-        <h3>Compétences</h3>
+        <h3 className="section__title"><span>Compétences</span></h3>
         <ul className="chips">
           <li className="chip">Design d’espaces (int./ext.)</li>
           <li className="chip">Scénographie</li>

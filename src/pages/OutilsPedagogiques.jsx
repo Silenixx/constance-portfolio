@@ -1,13 +1,23 @@
+import GalleryGrid from "../components/GalleryGrid.jsx";
+
 export default function OutilsPedagogique() {
+  const items = [
+    "/public/test.jpg",
+    "/public/test.jpg",
+    "/public/test.jpg",
+    "/public/test.jpg",
+  ];
+
   return (
     <section className="page">
-      <h2>Champs d’expertises</h2>
-      <ul className="bullets">
-        <li>Scénographie</li>
-        <li>Design d’espaces (intérieur / extérieur)</li>
-        <li>Design d’objets & mobiliers</li>
-        <li>Illustration</li>
-      </ul>
+      <h2>Design d’espaces</h2>
+      <p className="intro">
+        blaef e fqef qe feqqefq
+        fqefqefqefq
+        efqefqefqe
+      </p>
+
+      <GalleryGrid items={items} />
     </section>
   );
 }
