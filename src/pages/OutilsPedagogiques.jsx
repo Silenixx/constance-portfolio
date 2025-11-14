@@ -2,10 +2,10 @@ import GalleryGrid from "../components/GalleryGrid.jsx";
 
 export default function OutilsPedagogique() {
   const items = [
-    "/public/test.jpg",
-    "/public/test.jpg",
-    "/public/test.jpg",
-    "/public/test.jpg",
+    "/public/outils-pedagogiques/peda1.jpg",
+    "/public/outils-pedagogiques/peda2.jpg",
+    "/public/outils-pedagogiques/peda3.jpg",
+    "/public/outils-pedagogiques/peda4.jpg",
   ];
 
   return (
