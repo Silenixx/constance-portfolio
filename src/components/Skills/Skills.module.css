@@ -19,18 +19,28 @@
   letter-spacing: -0.03em;
 }
 
-.section ul {
+.groups {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-top: 1px solid var(--ink);
+  grid-template-columns: 1.15fr 0.85fr 1.15fr;
+  gap: clamp(24px, 4vw, 56px);
   margin-top: 28px;
+  padding-top: 8px;
+  border-top: 1px solid var(--ink);
 }
 
-.section li {
-  padding: 16px 24px 16px 0;
+.groups h3 {
+  margin: 14px 0 4px;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.groups li {
+  padding: 12px 0;
   border-bottom: 1px solid var(--line);
 }
 
-@media (max-width: 720px) {
-  .section ul { grid-template-columns: 1fr; }
+@media (max-width: 800px) {
+  .groups { grid-template-columns: 1fr; }
 }

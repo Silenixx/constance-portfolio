@@ -24,7 +24,21 @@
 
 .footer h2 em { font-style: italic; }
 
-.footer ul { margin-top: 32px; }
+.reach {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin-top: 28px;
+}
+
+.reach a {
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.reach a:hover { color: var(--clay); }
+
+.footer ul { margin-top: 28px; }
 
 .footer li a {
   display: flex;

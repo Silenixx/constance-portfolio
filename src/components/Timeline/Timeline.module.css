@@ -23,7 +23,7 @@
 
 .section li {
   display: grid;
-  grid-template-columns: minmax(140px, 200px) minmax(0, 1fr);
+  grid-template-columns: minmax(150px, 220px) minmax(0, 1fr);
   gap: 24px;
   padding: 20px 0;
   border-bottom: 1px solid var(--line);
@@ -36,6 +36,7 @@
 
 .section strong { font-weight: 500; }
 .section p { color: var(--ink-soft); }
+.detail { max-width: 62ch; margin-top: 6px; }
 
 @media (max-width: 720px) {
   .section li { grid-template-columns: 1fr; gap: 4px; }

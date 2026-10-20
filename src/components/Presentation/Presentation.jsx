@@ -3,8 +3,8 @@ import { site } from "../../data/site.js";
 
 const facts = [
   { label: "Lieu", value: site.place },
-  { label: "Diplôme", value: "DNSEP, Design des milieux" },
-  { label: "Pratique", value: "Objet, espace, pédagogie" },
+  { label: "Diplôme", value: "DNSEP, design des milieux" },
+  { label: "Pratique", value: "Santé, objet, pédagogie" },
 ];
 
 export function Presentation() {
@@ -12,7 +12,7 @@ export function Presentation() {
     <section className={styles.section} id="presentation">
       <header className={styles.head}>
         <p>Présentation</p>
-        <p>Designer conceptrice d’outils</p>
+        <p>Designer en santé</p>
       </header>
 
       <div className={styles.stage}>
@@ -32,16 +32,15 @@ export function Presentation() {
 
       <div className={styles.columns}>
         <p>
-          Je conçois des objets, des espaces et des scénographies en mettant
-          l’usage au centre. Le travail croise pédagogie, matérialité et
-          narration&nbsp;: chaque pièce doit être lisible, fonctionnelle et
-          durable.
+          Je conçois des objets, des espaces et des outils que l’on manipule.
+          Le travail croise design, santé et pédagogie&nbsp;: jeux, planches,
+          prototypes, du croquis jusqu’à la fabrication.
         </p>
         <p>
-          J’accompagne particuliers, collectivités et structures culturelles,
-          de l’idée à la mise en œuvre&nbsp;: recherche, esquisses, maquettes,
-          choix des matières, plans et suivi. Côté pédagogie, je développe des
-          supports que l’on manipule pour transmettre un savoir-faire.
+          Au CHRU de Nancy, je dessine des outils pour l’éducation thérapeutique
+          du patient, ainsi que des visuels et du graphisme. En stage, j’ai
+          aussi travaillé le packaging de jeux, le mobilier et la scénographie
+          d’objets.
         </p>
       </div>
 

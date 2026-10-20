@@ -12,6 +12,10 @@ export function Contact() {
         <br />
         une collaboration.
       </h2>
+      <div className={styles.reach}>
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+        <a href={`tel:${site.phoneHref}`}>{site.phone}</a>
+      </div>
       <ul>
         <li>
           <a href={site.instagram} target="_blank" rel="noreferrer noopener">

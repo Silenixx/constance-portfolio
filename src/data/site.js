@@ -2,6 +2,9 @@ export const site = {
   name: "Constance Tahay",
   role: "Design d'objet",
   place: "Nancy",
+  email: "constance.tahay@gmail.com",
+  phone: "06 30 72 05 20",
+  phoneHref: "+33630720520",
   instagram: "https://www.instagram.com/constance.tahay/",
   linkedin: "https://www.linkedin.com/in/constance-tahay-1965aa205/",
 };
@@ -128,53 +131,89 @@ export const projects = [
 
 export const education = [
   {
-    year: "2022 — 2024",
-    title: "DNSEP, Design des milieux",
-    place: "École nationale supérieure d'art et de design de Nancy",
+    year: "2024",
+    title: "DNSEP, design des milieux",
+    place: "École nationale supérieure d'art et de design, Nancy",
   },
   {
-    year: "2019 — 2022",
-    title: "DNA, design d'objet & espace",
-    place: "ÉSAD de Reims",
+    year: "2022",
+    title: "DNA, design d'objet et d'espace",
+    place: "École supérieure d'art et de design de Reims",
   },
   {
-    year: "2017",
-    title: "CPES-CAAP",
-    place: "Lycée — Ville",
+    year: "2019",
+    title: "Année préparatoire aux écoles d'arts",
+    place: "CPES-CAAP, lycée Chopin, Nancy",
   },
   {
-    year: "2017",
+    year: "2018",
     title: "Baccalauréat scientifique",
-    place: "Ensemble scolaire Notre Dame Saint Joseph",
+    place: "Spécialité mathématiques, ensemble scolaire Notre-Dame Saint-Joseph, Épinal",
   },
 ];
 
 export const experience = [
   {
-    year: "2024 — Aujourd'hui",
-    title: "Designer d'espaces & d'objets — Indépendante",
-    place:
-      "Conception d'intérieurs, scénographies, signalétique, mobiliers sur mesure.",
+    year: "2026",
+    title: "Graphiste, service communication",
+    place: "CHRU de Nancy",
+    detail:
+      "Un jour par semaine pendant six mois. Mise en page de livrets et d'affiches, conception de logos, création d'infographie.",
   },
   {
-    year: "2022 — 2024",
-    title: "Designer — Agence / Collectivité",
-    place: "AMO, plans, rendus, suivi de fabrication, coordination.",
+    year: "oct. 2024 — déc. 2026",
+    title: "Designer en santé",
+    place: "CDD, CHRU de Nancy",
+    detail:
+      "Outils pédagogiques pour les ateliers d'éducation thérapeutique du patient : puzzles en magnet, planches anatomiques et jeux de cartes, conçus avec les équipes. Visuels imprimés, flyers, livrets et outils graphiques.",
   },
   {
-    year: "2020 — 2022",
-    title: "Chargée d'outils pédagogiques",
-    place: "Supports ludiques, ateliers, kits méthodologiques.",
+    year: "nov. 2023 — mai 2024",
+    title: "Stage, outils pédagogiques",
+    place: "CHRU de Nancy",
+    detail:
+      "Projet de diplôme : mallette de jeux pédagogiques pour un programme d'ETP destiné aux enfants. Prototypage, fabrication et tests avec les soignants et les enfants.",
+  },
+  {
+    year: "juin — août 2023",
+    title: "Stage, communication et graphisme",
+    place: "CHRU de Nancy",
+    detail:
+      "Visuels, illustrations et livrets à destination des patients. Logos et mascottes pour les programmes d'éducation thérapeutique.",
+  },
+  {
+    year: "avr. — mai 2023",
+    title: "Stage, jeux de société pédagogique",
+    place: "Format Ludique",
+    detail:
+      "Recherche de matériaux et de formes pour le packaging des jeux, en écoconception. Prospection auprès des fabricants. Croquis et dispositifs scénographiques pour les salons.",
+  },
+  {
+    year: "juin 2021",
+    title: "Stage, design d'espace, d'objet et communication",
+    place: "Studio Shore.oo",
+    detail:
+      "Supports de communication et prototypes pour une série d'objets sensoriels. Mobilier sur mesure pour un espace en EHPAD, à partir des besoins des personnes âgées.",
   },
 ];
 
-export const skills = [
-  "Design d'objets",
-  "Outils pédagogiques",
-  "Design d'espaces",
-  "Scénographie",
-  "Esquisses & maquettes",
-  "Plans & détails",
-  "Suivi de fabrication",
-  "Signalétique",
+export const skillGroups = [
+  {
+    label: "Logiciels",
+    items: ["Suite Adobe", "Rhino 3D", "Keyshot", "Pack Office"],
+  },
+  {
+    label: "Langues",
+    items: ["Anglais (C1)", "Espagnol (B1)"],
+  },
+  {
+    label: "Intérêts",
+    items: [
+      "Impression 3D",
+      "Modélisation 3D",
+      "Travail de matériaux",
+      "Graphisme",
+      "Couture",
+    ],
+  },
 ];

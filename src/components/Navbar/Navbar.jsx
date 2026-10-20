@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
-import { nav, site } from "../../data/site.js";
+import { nav } from "../../data/site.js";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -53,7 +53,7 @@ export function Navbar() {
         Aller au contenu
       </a>
       <a className={styles.wordmark} href="#hero" onClick={close}>
-        {site.name}
+        Portfolio
       </a>
       <nav className={styles.links} aria-label="Sections">
         {nav.map((item) => (
