@@ -1,0 +1,124 @@
+.section {
+  padding: clamp(80px, 11vw, 140px) var(--pad);
+  scroll-margin-top: 88px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.head p:first-child {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.head p:last-child {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: right;
+}
+
+.stage {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: end;
+  padding: clamp(40px, 6vw, 72px) 0 clamp(28px, 4vw, 48px);
+}
+
+.stage img {
+  width: 148px;
+  height: 148px;
+  object-fit: cover;
+  background: var(--paper-deep);
+}
+
+.stage figcaption {
+  margin-top: 10px;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.stage blockquote {
+  max-width: 13ch;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(2.3rem, 4.8vw, 4.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 72px);
+  max-width: 68rem;
+}
+
+.columns p {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 48px;
+  border-top: 1px solid var(--line);
+}
+
+.facts li {
+  padding: 18px 28px 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.facts span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.facts strong {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.link {
+  display: inline-flex;
+  margin-top: 32px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--ink);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.link::after { content: " →"; }
+
+@media (max-width: 800px) {
+  .stage,
+  .columns,
+  .facts { grid-template-columns: 1fr; }
+
+  .head { align-items: flex-start; flex-direction: column; }
+  .head p:last-child { text-align: left; }
+  .facts li { padding-right: 0; }
+}
