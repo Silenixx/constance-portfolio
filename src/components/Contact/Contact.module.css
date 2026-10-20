@@ -38,26 +38,66 @@
 
 .reach a:hover { color: var(--clay); }
 
-.footer ul { margin-top: 28px; }
-
-.footer li a {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 14px 0;
-  border-top: 1px solid var(--line);
-  font-family: var(--serif);
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  letter-spacing: -0.03em;
-  line-height: 1;
+.social {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 36px;
 }
 
-.footer li:last-child a { border-bottom: 1px solid var(--line); }
-.footer li a:hover { color: var(--clay); }
+.social a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  min-height: 92px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
 
-.footer li span {
-  font-family: var(--sans);
-  font-size: 1rem;
+.social a:hover {
+  border-color: var(--clay);
+  background: rgba(154, 70, 50, 0.06);
+}
+
+.social svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.network {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.handle {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.arrow {
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.social a:hover .network,
+.social a:hover .arrow { color: var(--clay); }
+
+@media (max-width: 720px) {
+  .social { grid-template-columns: 1fr; }
 }
 
 .meta {

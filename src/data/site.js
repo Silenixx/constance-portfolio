@@ -6,7 +6,9 @@ export const site = {
   phone: "06 30 72 05 20",
   phoneHref: "+33630720520",
   instagram: "https://www.instagram.com/constance.tahay/",
+  instagramHandle: "@constance.tahay",
   linkedin: "https://www.linkedin.com/in/constance-tahay-1965aa205/",
+  linkedinHandle: "Constance Tahay",
 };
 
 export const nav = [
