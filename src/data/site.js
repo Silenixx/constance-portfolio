@@ -134,23 +134,31 @@ export const projects = [
 export const education = [
   {
     year: "2024",
+    level: "Master",
     title: "DNSEP, design des milieux",
-    place: "École nationale supérieure d'art et de design, Nancy",
+    school: "École nationale supérieure d'art et de design",
+    city: "Nancy",
   },
   {
     year: "2022",
+    level: "Licence",
     title: "DNA, design d'objet et d'espace",
-    place: "École supérieure d'art et de design de Reims",
+    school: "École supérieure d'art et de design",
+    city: "Reims",
   },
   {
     year: "2019",
+    level: "CPES-CAAP",
     title: "Année préparatoire aux écoles d'arts",
-    place: "CPES-CAAP, lycée Chopin, Nancy",
+    school: "Lycée Chopin",
+    city: "Nancy",
   },
   {
     year: "2018",
+    level: "Spécialité mathématiques",
     title: "Baccalauréat scientifique",
-    place: "Spécialité mathématiques, ensemble scolaire Notre-Dame Saint-Joseph, Épinal",
+    school: "Ensemble scolaire Notre-Dame Saint-Joseph",
+    city: "Épinal",
   },
 ];
 

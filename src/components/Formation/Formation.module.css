@@ -1,0 +1,112 @@
+.section {
+  padding: clamp(72px, 10vw, 120px) var(--pad) 0;
+  scroll-margin-top: 88px;
+}
+
+.kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.section h2 {
+  margin: 12px 0 28px;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.section ol {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+
+.section li {
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+  padding: 28px 28px 32px 0;
+}
+
+.section li + li {
+  padding-left: 28px;
+  border-left: 1px solid var(--line);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.head span {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.head p {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clay);
+}
+
+.section strong {
+  display: block;
+  max-width: 18ch;
+  margin-top: 22px;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.45rem, 2.2vw, 1.9rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.school {
+  margin-top: auto;
+  padding-top: 18px;
+  color: var(--ink-soft);
+}
+
+.city {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 900px) {
+  .section ol { grid-template-columns: 1fr 1fr; }
+
+  .section li + li { border-left: 0; padding-left: 0; }
+
+  .section li:nth-child(even) {
+    padding-left: 28px;
+    border-left: 1px solid var(--line);
+  }
+
+  .section li:nth-child(-n + 2) {
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 640px) {
+  .section ol { grid-template-columns: 1fr; }
+
+  .section li,
+  .section li:nth-child(even) {
+    min-height: 0;
+    padding: 24px 0;
+    border-left: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .section li:last-child { border-bottom: 0; }
+}
