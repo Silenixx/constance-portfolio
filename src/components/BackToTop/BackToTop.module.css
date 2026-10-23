@@ -1,13 +1,55 @@
 .button {
   position: fixed;
-  right: 22px;
-  bottom: 22px;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(18px, env(safe-area-inset-bottom));
   z-index: 30;
-  width: 44px;
-  height: 44px;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  font-size: 1.1rem;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(28, 25, 22, 0.28);
+  background: rgba(246, 241, 234, 0.92);
+  backdrop-filter: blur(12px);
+  color: var(--ink);
+  opacity: 0;
+  translate: 0 12px;
+  pointer-events: none;
+  transition:
+    opacity 0.4s ease,
+    translate 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.button:hover { color: var(--clay); }
+.on {
+  opacity: 1;
+  translate: 0 0;
+  pointer-events: auto;
+}
+
+.button svg {
+  width: 18px;
+  height: 18px;
+  overflow: visible;
+  transition: translate 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.button path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.button:hover,
+.button:focus-visible {
+  color: var(--clay);
+  border-color: var(--clay);
+}
+
+.button:hover svg,
+.button:focus-visible svg {
+  translate: 0 -3px;
+}

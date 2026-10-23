@@ -11,16 +11,19 @@ export function BackToTop() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (!visible) return null;
-
   return (
     <button
       type="button"
-      className={styles.button}
+      className={`${styles.button} ${visible ? styles.on : ""}`}
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="Haut de page"
+      aria-hidden={visible ? undefined : true}
+      tabIndex={visible ? 0 : -1}
     >
-      ↑
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 18.5 V8" />
+        <path d="M7.25 12.25 12 7.25 16.75 12.25" />
+      </svg>
     </button>
   );
 }
