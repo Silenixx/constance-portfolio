@@ -19,17 +19,35 @@ export function Navbar() {
       .map((item) => document.querySelector(item.href))
       .filter(Boolean);
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id);
-        });
-      },
-      { rootMargin: "-45% 0px -45% 0px", threshold: 0.01 }
-    );
+    let frame = 0;
 
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+    const update = () => {
+      frame = 0;
+      // Juste sous le menu fixe : la section lue est celle dont le haut a déjà passé cette ligne.
+      const marker = 96;
+      let current = "";
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= marker) current = section.id;
+      }
+      const atBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      if (atBottom && sections.length) current = sections[sections.length - 1].id;
+      setActive((prev) => (prev === current ? prev : current));
+    };
+
+    const onScroll = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
   }, []);
 
   useEffect(() => {

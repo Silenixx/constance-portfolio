@@ -114,6 +114,11 @@
   background: var(--paper-deep);
 }
 
+.list img[src^="/media/corps.jpg"],
+.sheet img[src^="/media/corps.jpg"] {
+  object-position: center 42%;
+}
+
 .list img {
   transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
