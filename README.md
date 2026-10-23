@@ -47,7 +47,7 @@ Inclus dans `traefik/deploytotal.sh`.
 
 - Page unique, navigation par ancres
 - Frise de mots (`src/data/frise.yml`)
-- Quatre projets en dialogue (photos dans `public/media/`)
+- Trois familles dans les projets : outils pédagogiques (photos dans `public/media/`), supports de communication (six livrets dans `public/livret/`, cinq affiches dans `public/affiche/`, aperçus dans `public/media/livrets/` et `public/media/affiches/`), logos. Lecture dans la page et téléchargement.
 - Parcours, formation, compétences, contact (mail, téléphone, Instagram, LinkedIn)
 
 ---

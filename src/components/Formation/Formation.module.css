@@ -50,7 +50,10 @@
 }
 
 .section li:first-child .rail::before { top: 0.35em; }
-.section li:last-child .rail::before { bottom: auto; height: 0.55em; }
+.section li:last-child .rail::before {
+  bottom: auto;
+  height: calc(28px + 0.55em);
+}
 
 .rail::after {
   content: "";

@@ -127,6 +127,138 @@ export const projects = [
   },
 ];
 
+export const booklets = [
+  {
+    slug: "epilepsie",
+    title: "Épilepsie",
+    subtitle: "Livret du programme ÉducÉpi",
+    materials: "Livret patient",
+    cover: "/media/livrets/epilepsie.jpg",
+    coverAlt:
+      "Couverture du livret ÉducÉpi, éducation thérapeutique du CHRU de Nancy",
+    lead: "Une synthèse des ateliers d’éducation thérapeutique, à reprendre après les séances ou plus tard.",
+    file: "Livret patient Epilepsie_12.12.24.pdf",
+  },
+  {
+    slug: "sclerodermie",
+    title: "Sclérodermie",
+    subtitle: "Livret du programme ESCLOR",
+    materials: "Livret patient",
+    cover: "/media/livrets/sclerodermie.jpg",
+    coverAlt:
+      "Couverture du livret ESCLOR sur la sclérodermie systémique, CHRU de Nancy",
+    lead: "Les ateliers de l’année, à emmener en séance pour les compléter et les retrouver ensuite.",
+    file: "Livret patient ESCLOR_11.02.25.pdf",
+  },
+  {
+    slug: "thrombose",
+    title: "Pass thrombose",
+    subtitle: "Suivi au quotidien",
+    materials: "Livret patient",
+    cover: "/media/livrets/thrombose.jpg",
+    coverAlt:
+      "Pass thrombose : gestes du quotidien, contacts et cellules sanguines en illustration",
+    lead: "Ce qu’il faut surveiller après une thrombose, quand alerter, et qui joindre.",
+    file: "Pass thrombose.pdf",
+  },
+  {
+    slug: "diabete",
+    title: "Diabète de type 1",
+    subtitle: "Fiche de suivi des examens",
+    materials: "Livret patient",
+    cover: "/media/livrets/diabete.jpg",
+    coverAlt:
+      "Fiche des examens recommandés, avec un schéma du corps et des dates à compléter",
+    lead: "Les examens recommandés, les objectifs et les vaccins, à compléter au fil du suivi.",
+    file: "Fiche suivi examens DT1_22.10.26.pdf",
+  },
+  {
+    slug: "tiques",
+    title: "Maladies liées aux tiques",
+    subtitle: "Livret patients, Nancy",
+    materials: "Livret patient",
+    cover: "/media/livrets/tiques.jpg",
+    coverAlt:
+      "Couverture du livret sur la prise en charge des maladies vectorielles liées aux tiques",
+    lead: "La prise en charge proposée par les centres de référence de l’Est, expliquée aux patients.",
+    file: "tiques-livret-patients-Nancy-02-2026.pdf",
+  },
+  {
+    slug: "stomie",
+    title: "Stomie",
+    subtitle: "Livret Vimastomi",
+    materials: "Livret patient",
+    cover: "/media/livrets/stomie.jpg",
+    coverAlt:
+      "Page du livret Vimastomi : pose de l’appareillage et schéma de la stomie",
+    lead: "Les gestes de l’appareillage, à relire une fois rentré à la maison.",
+    file: "Livret vimastomi.pdf",
+  },
+];
+
+export const posters = [
+  {
+    slug: "tenue-bloc",
+    title: "Tenue au bloc",
+    subtitle: "Affiche A3, secteur interventionnel",
+    materials: "Affiche",
+    cover: "/media/affiches/tenue-bloc.jpg",
+    coverAlt:
+      "Affiche « Tenue au bloc opératoire » : étapes illustrées de l’entrée au bloc jusqu’à la sortie",
+    lead: "Les gestes de l’habillage, du vestiaire d’entrée jusqu’à la sortie du bloc.",
+    file: "2022-03-tenue-bloc-A3 MAJ 2025.pdf",
+    folder: "affiche",
+  },
+  {
+    slug: "chirurgie-ambulatoire",
+    title: "Chirurgie ambulatoire",
+    subtitle: "Infographie du parcours",
+    materials: "Infographie",
+    cover: "/media/affiches/parcours-uca.jpg",
+    coverAlt:
+      "Infographie du parcours en unité de chirurgie ambulatoire, de la préparation à la maison jusqu’à la sortie",
+    lead: "La journée, de la préparation chez soi jusqu’au retour après l’intervention.",
+    file: "Infographie-parcours-UCA-20.02.2026.pdf",
+    folder: "affiche",
+  },
+  {
+    slug: "parcours-thrombose",
+    title: "PASS Thrombose",
+    subtitle: "Affiche du parcours",
+    materials: "Affiche",
+    cover: "/media/affiches/parcours-thrombose.jpg",
+    coverAlt:
+      "Affiche PASS Thrombose : le parcours d’accompagnement, du diagnostic au suivi",
+    lead: "Le suivi après une thrombose, de l’inclusion aux consultations des mois suivants.",
+    file: "PASS Thrombose A4.pdf",
+    folder: "affiche",
+  },
+  {
+    slug: "esclor",
+    title: "ESCLOR",
+    subtitle: "Roll-up du programme",
+    materials: "Roll-up",
+    cover: "/media/affiches/esclor.jpg",
+    coverAlt:
+      "Roll-up ESCLOR sur la sclérodermie systémique, avec le tournesol du programme",
+    lead: "À qui s’adresse le programme, pourquoi y participer, et quels ateliers sont proposés.",
+    file: "Roll up ESCLOR 28.01.2026.pdf",
+    folder: "affiche",
+  },
+  {
+    slug: "etp",
+    title: "Éducation thérapeutique",
+    subtitle: "Roll-up de l’UTEP",
+    materials: "Roll-up",
+    cover: "/media/affiches/utep.jpg",
+    coverAlt:
+      "Roll-up de l’unité d’éducation thérapeutique : ce qu’est l’ETP et les étapes du parcours",
+    lead: "Ce qu’est l’éducation thérapeutique, pour qui, et comment se déroule un parcours.",
+    file: "Roll up UTEP.pdf",
+    folder: "affiche",
+  },
+];
+
 export const education = [
   {
     year: "2024",
