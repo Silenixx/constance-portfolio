@@ -365,7 +365,7 @@ function ProjectDialog({ project, onClose }) {
 
   return createPortal(
     <div
-      className={styles.dialog}
+      className={`${styles.dialog} ${styles.dialogProject}`}
       role="dialog"
       aria-modal="true"
       aria-labelledby="projet-titre"
@@ -373,41 +373,45 @@ function ProjectDialog({ project, onClose }) {
         if (event.target === event.currentTarget) onClose();
       }}
     >
-      <div className={styles.sheet} onClick={(event) => event.stopPropagation()}>
-        <button type="button" className={styles.close} onClick={onClose}>
-          Fermer
-        </button>
-        <h2 id="projet-titre">{project.title}</h2>
-        <p className={styles.subtitle}>{project.subtitle}</p>
-        <dl>
-          <div>
-            <dt>Discipline</dt>
-            <dd>{project.discipline}</dd>
+      <div className={`${styles.sheet} ${styles.sheetProject}`} onClick={(event) => event.stopPropagation()}>
+        <div className={styles.sheetCopy}>
+          <button type="button" className={styles.close} onClick={onClose}>
+            Fermer
+          </button>
+          <h2 id="projet-titre">{project.title}</h2>
+          <p className={styles.subtitle}>{project.subtitle}</p>
+          <dl>
+            <div>
+              <dt>Discipline</dt>
+              <dd>{project.discipline}</dd>
+            </div>
+            <div>
+              <dt>Matières</dt>
+              <dd>{project.materials}</dd>
+            </div>
+          </dl>
+          <p className={styles.lead}>{project.lead}</p>
+          <div className={styles.notes}>
+            {project.sections.map((section) => (
+              <section key={section.title}>
+                <h3>{section.title}</h3>
+                <p>{section.body}</p>
+              </section>
+            ))}
           </div>
-          <div>
-            <dt>Matières</dt>
-            <dd>{project.materials}</dd>
-          </div>
-        </dl>
-        <p className={styles.lead}>{project.lead}</p>
-        {framesOf(project).length > 1 ? (
-          <Gallery
-            frames={framesOf(project)}
-            width={2000}
-            height={1333}
-            keys
-            start={project.imageIndex ?? 0}
-          />
-        ) : (
-          <img src={project.cover} alt={project.coverAlt} width="2000" height="1333" />
-        )}
-        <div className={styles.notes}>
-          {project.sections.map((section) => (
-            <section key={section.title}>
-              <h3>{section.title}</h3>
-              <p>{section.body}</p>
-            </section>
-          ))}
+        </div>
+        <div className={styles.sheetVisual}>
+          {framesOf(project).length > 1 ? (
+            <Gallery
+              frames={framesOf(project)}
+              width={2000}
+              height={1333}
+              keys
+              start={project.imageIndex ?? 0}
+            />
+          ) : (
+            <img src={project.cover} alt={project.coverAlt} width="2000" height="1333" />
+          )}
         </div>
       </div>
     </div>,

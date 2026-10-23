@@ -98,9 +98,27 @@ export const projects = [
     categories: ["objets", "pedagogie"],
     discipline: "Objet de médiation",
     materials: "Bois découpé, couleur",
-    cover: "/media/hopital.jpg",
+    cover: "/mediation/hopital.jpg",
     coverAlt:
       "Saynète en bois : façade d'hôpital, personnages nommés et jetons d'émotion posés sur un fond lilas",
+    images: [
+      {
+        src: "/mediation/hopital.jpg",
+        alt: "Saynète en bois : façade d'hôpital, personnages nommés et jetons d'émotion posés sur un fond lilas",
+      },
+      {
+        src: "/mediation/hopital-pieces.jpg",
+        alt: "Pièces du kit disposées sur fond lilas : façade restaurant, Lucas, Lucie, Zoé et une bulle écrite",
+      },
+      {
+        src: "/mediation/hopital-table.jpg",
+        alt: "Enfants qui disposent les personnages et les jetons d'émotion autour de la façade Hôpital",
+      },
+      {
+        src: "/mediation/hopital-feutre.jpg",
+        alt: "Main qui écrit au feutre sur une bulle, à côté des jetons joie, peur, confiance et colère",
+      },
+    ],
     lead: "Une saynète pour parler de l'hôpital avant d'y être, ou pendant qu'on y est. Une façade, des personnages, des mots que l'on peut écrire et montrer.",
     sections: [
       {
