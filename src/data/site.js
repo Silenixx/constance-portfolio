@@ -28,9 +28,27 @@ export const projects = [
     categories: ["objets", "pedagogie"],
     discipline: "Objet pédagogique",
     materials: "Contreplaqué gravé, résine",
-    cover: "/media/fruits.jpg",
+    cover: "/fruit-coque/fruits.jpg",
     coverAlt:
       "Plateau en bois clair gravé de noms de fruits à coque, cylindres de résine tenus au-dessus des alvéoles",
+    images: [
+      {
+        src: "/fruit-coque/fruits.jpg",
+        alt: "Plateau en bois clair gravé de noms de fruits à coque, cylindres de résine tenus au-dessus des alvéoles",
+      },
+      {
+        src: "/fruit-coque/fruits-mains.jpg",
+        alt: "Mains d'enfants qui classent les cylindres de résine sur le plateau gravé",
+      },
+      {
+        src: "/fruit-coque/fruits-pose.jpg",
+        alt: "Main qui pose un cylindre de noix dans l'alvéole noix de macadamia",
+      },
+      {
+        src: "/fruit-coque/fruits-tenue.jpg",
+        alt: "Enfant qui tient un cylindre de résine avec une cacahuète, au-dessus du plateau",
+      },
+    ],
     lead: "Un plateau pour nommer, reconnaître et ranger. Chaque cylindre de résine conserve un fruit réel ; chaque alvéole en porte le nom gravé.",
     sections: [
       {

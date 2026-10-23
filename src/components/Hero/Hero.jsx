@@ -21,6 +21,9 @@ export function Hero() {
             width="1200"
             height="1439"
           />
+          <svg className={styles.ring} viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="48.6" pathLength="1" />
+          </svg>
         </div>
       </div>
     </section>

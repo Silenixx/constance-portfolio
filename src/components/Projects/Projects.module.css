@@ -124,6 +124,62 @@
 }
 
 .cover:hover img { transform: scale(1.03); }
+.cover.gallery:hover img { transform: none; }
+
+.gallery {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.track {
+  display: flex;
+  width: 100%;
+}
+
+.track img {
+  flex: 0 0 100%;
+  min-width: 0;
+  transition: none;
+}
+
+.smooth {
+  transition: transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.coverOpen {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .smooth { transition: none; }
+}
+
+.step {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  translate: 0 -50%;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(28, 25, 22, 0.28);
+  background: rgba(246, 241, 234, 0.92);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.step:hover { color: var(--clay); }
+
+.prev { left: 12px; }
+.next { right: 12px; }
 
 .pages.list article,
 .pages.list article.flip {
