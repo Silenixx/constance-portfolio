@@ -1,6 +1,12 @@
+import { parse } from "yaml";
 import styles from "./Hero.module.css";
+import frise from "../../data/frise.yml?raw";
 
-const MATIERES = ["Contreplaqué", "Résine", "Gravure", "Couleur", "Geste", "Médiation"];
+const parsed = parse(frise);
+const MATIERES = Array.isArray(parsed?.mots)
+  ? parsed.mots.map((word) => String(word).trim()).filter(Boolean)
+  : [];
+const SEQUENCE = Array.from({ length: 4 }, () => MATIERES).flat();
 
 export function Hero() {
   return (
@@ -16,9 +22,13 @@ export function Hero() {
         </p>
       </div>
       <div className={styles.marquee} aria-hidden="true">
-        <div>
-          {[...MATIERES, ...MATIERES].map((word, index) => (
-            <span key={`${word}-${index}`}>{word}</span>
+        <div className={styles.track}>
+          {[0, 1].map((copy) => (
+            <div className={styles.group} key={copy}>
+              {SEQUENCE.map((word, index) => (
+                <span key={`${copy}-${word}-${index}`}>{word}</span>
+              ))}
+            </div>
           ))}
         </div>
       </div>

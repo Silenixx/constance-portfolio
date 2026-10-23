@@ -1,5 +1,6 @@
 .section {
   padding: clamp(40px, 5vw, 64px) var(--pad) clamp(36px, 4vw, 56px);
+  background: var(--sage-wash);
   scroll-margin-top: 88px;
 }
 
@@ -60,7 +61,7 @@
   height: 9px;
   border: 1px solid var(--ink);
   border-radius: 50%;
-  background: var(--paper);
+  background: var(--sage-wash);
   transform: translateX(-50%);
 }
 

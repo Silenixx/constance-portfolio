@@ -43,22 +43,28 @@
 
 .marquee {
   overflow: hidden;
-  border-top: 1px solid var(--line);
-  padding: 14px 0;
+  background: var(--lilac);
+  padding: 18px 0;
 }
 
-.marquee div {
+.track {
   display: flex;
   width: max-content;
+  animation: drift 168s linear infinite;
+}
+
+.group {
+  display: flex;
+  flex-shrink: 0;
   gap: 56px;
-  animation: drift 42s linear infinite;
+  padding-right: 56px;
 }
 
 .marquee span {
   font-size: 0.7rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--ink);
 }
 
 @keyframes drift {

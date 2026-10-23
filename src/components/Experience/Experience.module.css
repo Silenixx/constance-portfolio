@@ -1,5 +1,6 @@
 .section {
   padding: clamp(40px, 5vw, 64px) var(--pad) clamp(36px, 4vw, 56px);
+  background: var(--ochre-wash);
   scroll-margin-top: 88px;
 }
 

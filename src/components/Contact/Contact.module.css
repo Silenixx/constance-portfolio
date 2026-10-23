@@ -1,7 +1,9 @@
 .footer {
   margin-top: 0;
   padding: clamp(56px, 8vw, 96px) var(--pad) 28px;
-  border-top: 1px solid var(--ink);
+  background: var(--plum);
+  color: var(--paper);
+  border-top: 0;
   scroll-margin-top: 88px;
 }
 
@@ -9,7 +11,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--lilac);
 }
 
 .footer h2 {
@@ -33,10 +35,10 @@
 
 .reach a {
   padding-bottom: 2px;
-  border-bottom: 1px solid var(--ink);
+  border-bottom: 1px solid var(--paper);
 }
 
-.reach a:hover { color: var(--clay); }
+.reach a:hover { color: var(--lilac); }
 
 .social {
   display: grid;
@@ -52,13 +54,13 @@
   gap: 16px;
   min-height: 92px;
   padding: 16px 18px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(246, 241, 234, 0.28);
   transition: border-color 0.25s ease, background 0.25s ease;
 }
 
 .social a:hover {
-  border-color: var(--clay);
-  background: rgba(154, 70, 50, 0.06);
+  border-color: var(--lilac);
+  background: rgba(246, 241, 234, 0.06);
 }
 
 .social svg {
@@ -76,7 +78,7 @@
   font-size: 0.68rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--lilac);
 }
 
 .handle {
@@ -90,11 +92,11 @@
 
 .arrow {
   font-size: 1.05rem;
-  color: var(--muted);
+  color: var(--lilac);
 }
 
 .social a:hover .network,
-.social a:hover .arrow { color: var(--clay); }
+.social a:hover .arrow { color: var(--paper); }
 
 @media (max-width: 720px) {
   .social { grid-template-columns: 1fr; }
@@ -105,11 +107,11 @@
   justify-content: space-between;
   gap: 16px;
   margin-top: 36px;
-  color: var(--muted);
+  color: rgba(246, 241, 234, 0.72);
   font-size: 0.9rem;
 }
 
-.meta span { color: var(--muted); }
+.meta span { color: rgba(246, 241, 234, 0.72); }
 
 @media (max-width: 720px) {
   .meta { flex-direction: column; }

@@ -6,6 +6,10 @@
   --muted: #746b62;
   --line: rgba(28, 25, 22, 0.14);
   --clay: #9a4632;
+  --lilac: #d4cbe4;
+  --ochre-wash: #f3e3d4;
+  --sage-wash: #e4ece4;
+  --plum: #3e3552;
   --header: 74px;
   --pad: clamp(20px, 4.2vw, 72px);
   --serif: "Instrument Serif", "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
