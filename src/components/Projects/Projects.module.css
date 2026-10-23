@@ -305,8 +305,10 @@
 
 .dialogProject {
   display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  padding: 16px;
+  padding: clamp(28px, 4.5vh, 56px) clamp(32px, 4.5vw, 72px);
 }
 
 .sheetProject {
@@ -324,6 +326,8 @@
   min-height: 0;
   overflow: auto;
   padding: 22px 28px 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #8d847a transparent;
 }
 
 .sheetProject .close {
@@ -486,7 +490,7 @@
   .dialogBook .sheetBook { grid-template-columns: 1fr; overflow: auto; }
   .dialogBook .bookSide { padding: 24px 20px 8px; }
   .dialogBook .viewer { height: 72vh; }
-  .dialogProject { overflow: auto; }
+  .dialogProject { overflow: auto; padding: 16px; }
   .sheetProject {
     grid-template-columns: 1fr;
     height: auto;

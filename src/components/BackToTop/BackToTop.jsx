@@ -21,8 +21,8 @@ export function BackToTop() {
       tabIndex={visible ? 0 : -1}
     >
       <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 18.5 V8" />
-        <path d="M7.25 12.25 12 7.25 16.75 12.25" />
+        <path d="M12 17.6 V7.1" />
+        <path d="M7.25 11.35 12 6.35 16.75 11.35" />
       </svg>
     </button>
   );
