@@ -1,5 +1,5 @@
 .section {
-  padding: clamp(72px, 10vw, 120px) var(--pad) 0;
+  padding: clamp(40px, 5vw, 64px) var(--pad) clamp(28px, 4vw, 48px);
   scroll-margin-top: 88px;
 }
 
@@ -8,8 +8,7 @@
   justify-content: space-between;
   align-items: baseline;
   gap: 16px;
-  border-top: 1px solid var(--ink);
-  padding-top: 14px;
+  padding-top: 0;
   margin-bottom: clamp(36px, 5vw, 64px);
 }
 

@@ -1,5 +1,5 @@
 .section {
-  padding: clamp(72px, 10vw, 120px) var(--pad) 0;
+  padding: clamp(40px, 5vw, 64px) var(--pad) clamp(36px, 4vw, 56px);
   scroll-margin-top: 88px;
 }
 

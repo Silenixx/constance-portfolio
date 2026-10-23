@@ -1,5 +1,5 @@
 .footer {
-  margin-top: clamp(72px, 10vw, 120px);
+  margin-top: 0;
   padding: clamp(56px, 8vw, 96px) var(--pad) 28px;
   border-top: 1px solid var(--ink);
   scroll-margin-top: 88px;

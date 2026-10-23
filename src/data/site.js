@@ -13,9 +13,9 @@ export const site = {
 
 export const nav = [
   { href: "#presentation", label: "Présentation" },
+  { href: "#parcours", label: "Parcours" },
   { href: "#projets", label: "Projets" },
   { href: "#formation", label: "Formation" },
-  { href: "#parcours", label: "Parcours" },
   { href: "#competences", label: "Compétences" },
   { href: "#contact", label: "Contact" },
 ];
