@@ -18,7 +18,7 @@ export function Presentation() {
       <div className={styles.stage}>
         <figure>
           <img
-            src="/constance2.jpg"
+            src="/constance.jpeg"
             alt="Constance Tahay"
             width="150"
             height="150"

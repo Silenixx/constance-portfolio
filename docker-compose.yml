@@ -1,0 +1,23 @@
+version: "3.9"
+
+networks:
+  web:
+    external: true
+
+services:
+  constance_nginx:
+    image: nginx:alpine
+    container_name: constance_nginx
+    restart: unless-stopped
+    volumes:
+      - ./dist:/usr/share/nginx/html:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+    networks:
+      - web
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.constance.rule=(Host(`constance.lukasblanchot.fr`) || Host(`constance.lukasblanchot.com`))
+      - traefik.http.routers.constance.entrypoints=websecure
+      - traefik.http.routers.constance.tls=true
+      - traefik.http.routers.constance.tls.certresolver=le
+      - traefik.http.services.constance.loadbalancer.server.port=80

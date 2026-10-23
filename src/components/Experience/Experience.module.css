@@ -35,17 +35,8 @@
 .meta {
   grid-column: 1 / -1;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: baseline;
-  gap: 16px;
-}
-
-.index {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 1.45rem;
-  line-height: 1;
-  color: var(--clay);
 }
 
 .year {

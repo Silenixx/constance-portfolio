@@ -7,12 +7,9 @@ export function Experience() {
       <p className={styles.kicker}>Parcours</p>
       <h2>Expérience</h2>
       <ol>
-        {experience.map((item, index) => (
+        {experience.map((item) => (
           <li key={`${item.year}-${item.title}`}>
             <div className={styles.meta}>
-              <span className={styles.index}>
-                {String(index + 1).padStart(2, "0")}
-              </span>
               <span className={styles.year}>{item.year}</span>
             </div>
             <div>

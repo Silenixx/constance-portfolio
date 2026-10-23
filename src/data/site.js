@@ -23,7 +23,6 @@ export const nav = [
 export const projects = [
   {
     slug: "fruits-a-coque",
-    index: "01",
     title: "Fruits à coque",
     subtitle: "L'arachide et les fruits à coque",
     categories: ["objets", "pedagogie"],
@@ -50,7 +49,6 @@ export const projects = [
   },
   {
     slug: "caisse-atelier",
-    index: "02",
     title: "Caisse atelier",
     subtitle: "Contenant pliable",
     categories: ["objets", "pedagogie"],
@@ -77,7 +75,6 @@ export const projects = [
   },
   {
     slug: "a-l-hopital",
-    index: "03",
     title: "À l'hôpital",
     subtitle: "Kit de médiation",
     categories: ["objets", "pedagogie"],
@@ -104,7 +101,6 @@ export const projects = [
   },
   {
     slug: "le-corps-explique",
-    index: "04",
     title: "Le corps expliqué",
     subtitle: "Plateau anatomique",
     categories: ["objets", "pedagogie"],

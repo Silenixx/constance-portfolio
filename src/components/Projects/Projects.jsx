@@ -27,7 +27,6 @@ export function Projects() {
                 loading={index === 0 ? "eager" : "lazy"}
               />
               <div>
-                <p className={styles.index}>{project.index}</p>
                 <h3>{project.title}</h3>
                 <p>{project.subtitle}</p>
                 <p className={styles.materials}>{project.materials}</p>
@@ -71,7 +70,6 @@ function ProjectDialog({ project, onClose }) {
         <button type="button" className={styles.close} onClick={onClose}>
           Fermer
         </button>
-        <p className={styles.index}>{project.index}</p>
         <h2 id="projet-titre">{project.title}</h2>
         <p className={styles.subtitle}>{project.subtitle}</p>
         <dl>
