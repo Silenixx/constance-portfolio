@@ -48,6 +48,7 @@ export function Projects() {
             <ProjectList
               items={group.items}
               priority={group.id === "pedagogiques"}
+              pages={group.id === "communication"}
               onOpen={setCurrent}
             />
           ) : (
@@ -66,9 +67,9 @@ export function Projects() {
   );
 }
 
-function ProjectList({ items, priority, onOpen }) {
+function ProjectList({ items, priority, pages, onOpen }) {
   return (
-    <div className={styles.list}>
+    <div className={pages ? `${styles.list} ${styles.pages}` : styles.list}>
       {items.map((project, index) => (
         <article
           key={project.slug}
@@ -83,8 +84,8 @@ function ProjectList({ items, priority, onOpen }) {
             <img
               src={project.cover}
               alt={project.coverAlt}
-              width="1800"
-              height="1200"
+              width={project.coverWidth ?? 1800}
+              height={project.coverHeight ?? 1200}
               loading={priority && index === 0 ? "eager" : "lazy"}
             />
           </button>

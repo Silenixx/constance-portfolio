@@ -134,6 +134,8 @@ export const booklets = [
     subtitle: "Livret du programme ÉducÉpi",
     materials: "Livret patient",
     cover: "/media/livrets/epilepsie.jpg",
+    coverWidth: 1127,
+    coverHeight: 1600,
     coverAlt:
       "Couverture du livret ÉducÉpi, éducation thérapeutique du CHRU de Nancy",
     lead: "Une synthèse des ateliers d’éducation thérapeutique, à reprendre après les séances ou plus tard.",
@@ -145,6 +147,8 @@ export const booklets = [
     subtitle: "Livret du programme ESCLOR",
     materials: "Livret patient",
     cover: "/media/livrets/sclerodermie.jpg",
+    coverWidth: 1132,
+    coverHeight: 1600,
     coverAlt:
       "Couverture du livret ESCLOR sur la sclérodermie systémique, CHRU de Nancy",
     lead: "Les ateliers de l’année, à emmener en séance pour les compléter et les retrouver ensuite.",
@@ -156,6 +160,8 @@ export const booklets = [
     subtitle: "Suivi au quotidien",
     materials: "Livret patient",
     cover: "/media/livrets/thrombose.jpg",
+    coverWidth: 1600,
+    coverHeight: 1132,
     coverAlt:
       "Pass thrombose : gestes du quotidien, contacts et cellules sanguines en illustration",
     lead: "Ce qu’il faut surveiller après une thrombose, quand alerter, et qui joindre.",
@@ -167,6 +173,8 @@ export const booklets = [
     subtitle: "Fiche de suivi des examens",
     materials: "Livret patient",
     cover: "/media/livrets/diabete.jpg",
+    coverWidth: 1132,
+    coverHeight: 1600,
     coverAlt:
       "Fiche des examens recommandés, avec un schéma du corps et des dates à compléter",
     lead: "Les examens recommandés, les objectifs et les vaccins, à compléter au fil du suivi.",
@@ -178,6 +186,8 @@ export const booklets = [
     subtitle: "Livret patients, Nancy",
     materials: "Livret patient",
     cover: "/media/livrets/tiques.jpg",
+    coverWidth: 1132,
+    coverHeight: 1600,
     coverAlt:
       "Couverture du livret sur la prise en charge des maladies vectorielles liées aux tiques",
     lead: "La prise en charge proposée par les centres de référence de l’Est, expliquée aux patients.",
@@ -189,6 +199,8 @@ export const booklets = [
     subtitle: "Livret Vimastomi",
     materials: "Livret patient",
     cover: "/media/livrets/stomie.jpg",
+    coverWidth: 1600,
+    coverHeight: 1132,
     coverAlt:
       "Page du livret Vimastomi : pose de l’appareillage et schéma de la stomie",
     lead: "Les gestes de l’appareillage, à relire une fois rentré à la maison.",
@@ -203,6 +215,8 @@ export const posters = [
     subtitle: "Affiche A3, secteur interventionnel",
     materials: "Affiche",
     cover: "/media/affiches/tenue-bloc.jpg",
+    coverWidth: 1132,
+    coverHeight: 1600,
     coverAlt:
       "Affiche « Tenue au bloc opératoire » : étapes illustrées de l’entrée au bloc jusqu’à la sortie",
     lead: "Les gestes de l’habillage, du vestiaire d’entrée jusqu’à la sortie du bloc.",
@@ -215,6 +229,8 @@ export const posters = [
     subtitle: "Infographie du parcours",
     materials: "Infographie",
     cover: "/media/affiches/parcours-uca.jpg",
+    coverWidth: 1137,
+    coverHeight: 1600,
     coverAlt:
       "Infographie du parcours en unité de chirurgie ambulatoire, de la préparation à la maison jusqu’à la sortie",
     lead: "La journée, de la préparation chez soi jusqu’au retour après l’intervention.",
@@ -227,6 +243,8 @@ export const posters = [
     subtitle: "Affiche du parcours",
     materials: "Affiche",
     cover: "/media/affiches/parcours-thrombose.jpg",
+    coverWidth: 1132,
+    coverHeight: 1600,
     coverAlt:
       "Affiche PASS Thrombose : le parcours d’accompagnement, du diagnostic au suivi",
     lead: "Le suivi après une thrombose, de l’inclusion aux consultations des mois suivants.",
@@ -239,6 +257,8 @@ export const posters = [
     subtitle: "Roll-up du programme",
     materials: "Roll-up",
     cover: "/media/affiches/esclor.jpg",
+    coverWidth: 641,
+    coverHeight: 1600,
     coverAlt:
       "Roll-up ESCLOR sur la sclérodermie systémique, avec le tournesol du programme",
     lead: "À qui s’adresse le programme, pourquoi y participer, et quels ateliers sont proposés.",
@@ -251,6 +271,8 @@ export const posters = [
     subtitle: "Roll-up de l’UTEP",
     materials: "Roll-up",
     cover: "/media/affiches/utep.jpg",
+    coverWidth: 641,
+    coverHeight: 1600,
     coverAlt:
       "Roll-up de l’unité d’éducation thérapeutique : ce qu’est l’ETP et les étapes du parcours",
     lead: "Ce qu’est l’éducation thérapeutique, pour qui, et comment se déroule un parcours.",
