@@ -73,6 +73,12 @@
   color: var(--muted);
 }
 
+.logos.list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(36px, 5vw, 64px);
+}
+
 .list {
   display: flex;
   flex-direction: column;
@@ -84,6 +90,13 @@
   grid-template-columns: minmax(0, 1.3fr) minmax(180px, 0.7fr);
   gap: clamp(18px, 4vw, 72px);
   align-items: end;
+}
+
+.logos.list article {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
 }
 
 .list article.flip { grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr); }
@@ -112,6 +125,12 @@
   aspect-ratio: 3 / 2;
   object-fit: cover;
   background: var(--paper-deep);
+}
+
+.logos img {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: var(--paper);
 }
 
 .list img[src^="/media/corps.jpg"],
@@ -471,6 +490,7 @@
 @media (max-width: 860px) {
   .list article,
   .list article.flip { grid-template-columns: 1fr; }
+  .logos.list { grid-template-columns: 1fr; }
   .flip .cover { order: 0; }
   .pages.list article,
   .pages.list article.flip {

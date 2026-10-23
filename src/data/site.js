@@ -413,3 +413,92 @@ export const skillGroups = [
     ],
   },
 ];
+
+export const logos = [
+  {
+    slug: "resutep",
+    title: "ResUtep",
+    subtitle: "Réseau national des UTEP",
+    discipline: "Identité visuelle",
+    materials: "Signe, déclinaisons",
+    cover: "/logo/resutep.png",
+    coverAlt:
+      "Logo ResUtep : carte de France en réseau de points colorés, au-dessus du nom du réseau",
+    images: [
+      {
+        src: "/logo/resutep.png",
+        alt: "Logo ResUtep : carte de France en réseau de points colorés, au-dessus du nom du réseau",
+      },
+      {
+        src: "/logo/resutep-variantes.jpg",
+        alt: "Six déclinaisons du logo ResUtep, avec la carte, une main et le nom du réseau",
+      },
+    ],
+    lead: "Le signe du réseau des unités transversales d'éducation du patient. Une carte de France reliée, et le mot ResUtep.",
+    sections: [
+      {
+        title: "Déclinaisons",
+        body: "La carte, la main et le mot se recomposent. Le signe tient seul, ou posé dans un cercle.",
+      },
+    ],
+  },
+  {
+    slug: "educard",
+    title: "EDUCARD",
+    subtitle: "Signe du programme",
+    discipline: "Identité visuelle",
+    materials: "Signe",
+    cover: "/logo/educard.jpg",
+    coverAlt: "Planche de variantes du logo EDUCARD, un cœur anatomique en rose",
+    lead: "Un cœur anatomique, décliné en aplat et en contour, pour le programme EDUCARD.",
+    sections: [
+      {
+        title: "Signes",
+        body: "Le cœur passe du contour au plein, avec ou sans le tracé du rythme. Le nom reste lisible dans chaque version.",
+      },
+    ],
+  },
+  {
+    slug: "etp-game",
+    title: "ETP G.A.M.E",
+    subtitle: "Signe et mascotte",
+    discipline: "Identité visuelle",
+    materials: "Signe, mascotte",
+    cover: "/logo/etp-game.jpg",
+    coverAlt: "Planche de logos ETP G.A.M.E, un robot violet dont la tête est un tracé",
+    images: [
+      {
+        src: "/logo/etp-game.jpg",
+        alt: "Planche de logos ETP G.A.M.E, un robot violet dont la tête est un tracé",
+      },
+      {
+        src: "/logo/etp-game-mascotte.jpg",
+        alt: "Mascotte ETP G.A.M.E en plusieurs poses : debout, assise, en train de saluer",
+      },
+    ],
+    lead: "Un robot dont la tête reprend un tracé d'électroencéphalogramme. Le signe devient aussi un personnage.",
+    sections: [
+      {
+        title: "Personnage",
+        body: "Le robot sert de logo et de mascotte. Il se tient debout, assis, ou en train de saluer.",
+      },
+    ],
+  },
+  {
+    slug: "educ-epi",
+    title: "ÉducÉpi",
+    subtitle: "Mascotte du programme",
+    discipline: "Identité visuelle",
+    materials: "Mascotte",
+    cover: "/logo/educ-epi-mascotte.png",
+    coverAlt:
+      "Mascotte du programme d'épilepsie, un robot violet décliné sur les ateliers",
+    lead: "Le personnage posé sur les ateliers du programme : la crise, les traitements, la scolarité, le passage à l'âge adulte.",
+    sections: [
+      {
+        title: "Ateliers",
+        body: "Chaque pose porte un atelier. La crise, les traitements, l'alimentation, la scolarité, l'accompagnement, le passage à l'âge adulte.",
+      },
+    ],
+  },
+];

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import styles from "./Projects.module.css";
-import { booklets, posters, projects } from "../../data/site.js";
+import { booklets, logos, posters, projects } from "../../data/site.js";
 
 const groups = [
   {
@@ -21,7 +21,7 @@ const groups = [
     id: "logos",
     title: "Logos",
     lead: "Signes et identités visuelles.",
-    items: [],
+    items: logos,
   },
 ];
 
@@ -49,6 +49,7 @@ export function Projects() {
               items={group.items}
               priority={group.id === "pedagogiques"}
               pages={group.id === "communication"}
+              logos={group.id === "logos"}
               onOpen={setCurrent}
             />
           ) : (
@@ -248,15 +249,19 @@ function Gallery({ frames, className, label, priority, width, height, onOpen, ke
   );
 }
 
-function ProjectList({ items, priority, pages, onOpen }) {
+function ProjectList({ items, priority, pages, logos, onOpen }) {
+  const className = [styles.list, pages && styles.pages, logos && styles.logos]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <div className={pages ? `${styles.list} ${styles.pages}` : styles.list}>
+    <div className={className}>
       {items.map((project, index) => {
         const frames = framesOf(project);
         return (
         <article
           key={project.slug}
-          className={index % 2 === 1 ? styles.flip : undefined}
+          className={!logos && index % 2 === 1 ? styles.flip : undefined}
         >
           {frames.length > 1 ? (
             <Gallery
@@ -380,17 +385,24 @@ function ProjectDialog({ project, onClose }) {
           </button>
           <h2 id="projet-titre">{project.title}</h2>
           <p className={styles.subtitle}>{project.subtitle}</p>
-          <dl>
-            <div>
-              <dt>Discipline</dt>
-              <dd>{project.discipline}</dd>
-            </div>
-            <div>
-              <dt>Matières</dt>
-              <dd>{project.materials}</dd>
-            </div>
-          </dl>
+          {(project.discipline || project.materials) && (
+            <dl>
+              {project.discipline && (
+                <div>
+                  <dt>Discipline</dt>
+                  <dd>{project.discipline}</dd>
+                </div>
+              )}
+              {project.materials && (
+                <div>
+                  <dt>Matières</dt>
+                  <dd>{project.materials}</dd>
+                </div>
+              )}
+            </dl>
+          )}
           <p className={styles.lead}>{project.lead}</p>
+          {project.sections?.length > 0 && (
           <div className={styles.notes}>
             {project.sections.map((section) => (
               <section key={section.title}>
@@ -399,6 +411,7 @@ function ProjectDialog({ project, onClose }) {
               </section>
             ))}
           </div>
+          )}
         </div>
         <div className={styles.sheetVisual}>
           {framesOf(project).length > 1 ? (
