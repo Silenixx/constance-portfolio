@@ -1,5 +1,5 @@
 .section {
-  padding: clamp(40px, 5vw, 64px) var(--pad) clamp(36px, 4vw, 56px);
+  padding: clamp(40px, 5vw, 64px) var(--pad) clamp(48px, 6vw, 80px);
   scroll-margin-top: 88px;
 }
 
@@ -20,27 +20,79 @@
 }
 
 .groups {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr 1.15fr;
-  gap: clamp(24px, 4vw, 56px);
-  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(36px, 5vw, 56px);
+  margin-top: 32px;
   padding-top: 8px;
   border-top: 1px solid var(--ink);
 }
 
-.groups h3 {
-  margin: 14px 0 4px;
+.group h3 {
+  margin: 18px 0 16px;
   font-size: 0.72rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
-.groups li {
-  padding: 12px 0;
-  border-bottom: 1px solid var(--line);
+.group ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(28px, 4vw, 64px);
 }
 
-@media (max-width: 800px) {
-  .groups { grid-template-columns: 1fr; }
+.group li {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  column-gap: 16px;
+  align-items: center;
+  min-width: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(28, 25, 22, 0.16);
+}
+
+.group figure {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 92px;
+  height: 64px;
+  margin: 0;
+}
+
+.group img {
+  width: auto;
+  height: 52px;
+  max-width: 92px;
+  object-fit: contain;
+}
+
+.group img[src^="/competences/"] {
+  width: 64px;
+  height: 64px;
+  max-width: none;
+  object-fit: cover;
+}
+
+.group h4 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.55rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.group p {
+  margin-top: 4px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+@media (max-width: 720px) {
+  .group ul { grid-template-columns: 1fr; }
+  .group h4 { font-size: 1.35rem; }
 }

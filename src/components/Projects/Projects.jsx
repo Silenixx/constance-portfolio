@@ -49,11 +49,12 @@ export function Projects() {
           </header>
           {group.shelves ? (
             <PageShelves shelves={group.shelves} onOpen={setCurrent} />
+          ) : group.id === "logos" && group.items.length > 0 ? (
+            <LogoWall items={group.items} onOpen={setCurrent} />
           ) : group.items.length > 0 ? (
             <ProjectList
               items={group.items}
               priority={group.id === "pedagogiques"}
-              logos={group.id === "logos"}
               onOpen={setCurrent}
             />
           ) : (
@@ -289,13 +290,29 @@ function PageShelves({ shelves, onOpen }) {
   );
 }
 
-function ProjectList({ items, priority, logos, onOpen }) {
-  const className = [styles.list, logos && styles.logos]
-    .filter(Boolean)
-    .join(" ");
-
+function LogoWall({ items, onOpen }) {
   return (
-    <div className={className}>
+    <div className={styles.logoWall}>
+      {items.map((item) => (
+        <button
+          key={item.slug}
+          type="button"
+          className={styles.logo}
+          onClick={() => onOpen(item)}
+        >
+          <span className={styles.logoFrame}>
+            <img src={item.cover} alt="" loading="lazy" />
+          </span>
+          <span className={styles.logoName}>{item.title}</span>
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function ProjectList({ items, priority, onOpen }) {
+  return (
+    <div className={styles.list}>
       {items.map((project, index) => {
         const frames = framesOf(project);
         return (
@@ -303,7 +320,7 @@ function ProjectList({ items, priority, logos, onOpen }) {
           key={project.slug}
           className={
             [
-              !logos && index % 2 === 1 ? styles.flip : "",
+              index % 2 === 1 ? styles.flip : "",
               project.frame === "portrait" ? styles.portrait : "",
             ]
               .filter(Boolean)

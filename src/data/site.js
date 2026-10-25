@@ -397,20 +397,72 @@ export const experience = [
 export const skillGroups = [
   {
     label: "Logiciels",
-    items: ["Suite Adobe", "Rhino 3D", "Keyshot", "Pack Office"],
+    items: [
+      {
+        title: "Suite Adobe",
+        text: "Mise en page, image et dessin.",
+        image: "/skill/adobe.svg",
+      },
+      {
+        title: "Rhino 3D",
+        text: "Modéliser un volume avant de le fabriquer.",
+        image: "/skill/rhino.svg",
+      },
+      {
+        title: "Keyshot",
+        text: "Rendre un prototype avant qu’il existe.",
+        image: "/skill/keyshot.svg",
+      },
+      {
+        title: "Pack Office",
+        text: "Écrire, chiffrer, présenter.",
+        image: "/skill/office.svg",
+      },
+    ],
   },
   {
     label: "Langues",
-    items: ["Anglais (C1)", "Espagnol (B1)"],
+    items: [
+      {
+        title: "Anglais",
+        text: "Niveau C1.",
+        image: "/skill/anglais.svg",
+      },
+      {
+        title: "Espagnol",
+        text: "Niveau B1.",
+        image: "/skill/espagnol.svg",
+      },
+    ],
   },
   {
     label: "Intérêts",
     items: [
-      "Impression 3D",
-      "Modélisation 3D",
-      "Travail de matériaux",
-      "Graphisme",
-      "Couture",
+      {
+        title: "Impression 3D",
+        text: "Passer du fichier à la pièce.",
+        image: "/competences/impression.svg",
+      },
+      {
+        title: "Modélisation 3D",
+        text: "Dessiner dans le volume.",
+        image: "/competences/modelisation.svg",
+      },
+      {
+        title: "Travail de matériaux",
+        text: "Couper, poncer, assembler.",
+        image: "/competences/materiaux.svg",
+      },
+      {
+        title: "Graphisme",
+        text: "Signes, mises en page, images.",
+        image: "/competences/graphisme.svg",
+      },
+      {
+        title: "Couture",
+        text: "Tissu, patron, couture à la main.",
+        image: "/competences/couture.svg",
+      },
     ],
   },
 ];
