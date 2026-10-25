@@ -66,32 +66,6 @@ export const projects = [
     ],
   },
   {
-    slug: "caisse-atelier",
-    title: "Caisse atelier",
-    subtitle: "Contenant pliable",
-    categories: ["objets", "pedagogie"],
-    discipline: "Mobilier nomade",
-    materials: "Contreplaqué, gravure",
-    cover: "/media/caisse.jpg",
-    coverAlt:
-      "Personne portant une caisse pliable en contreplaqué clair, poignées découpées et traits de montage gravés",
-    lead: "Une caisse qui se porte, se déplie, et montre comment elle est faite. Le mode d'emploi n'est pas une notice à part : il est gravé dans les panneaux.",
-    sections: [
-      {
-        title: "Intention",
-        body: "Un atelier a besoin d'un corps. Quelque chose qui contient les pièces, les protège et se déplace jusqu'à la table où la séance commence. La caisse est le premier objet que l'on pose.",
-      },
-      {
-        title: "Usage",
-        body: "Poignées découpées pour la prendre contre soi, panneaux qui se replient, rangements lisibles. On arrive, on ouvre, l'atelier est déjà là.",
-      },
-      {
-        title: "Matière",
-        body: "Contreplaqué clair, traits de pliage et indications gravées, assemblages apparents. Rien n'est caché : la construction fait partie de ce que l'objet enseigne.",
-      },
-    ],
-  },
-  {
     slug: "a-l-hopital",
     title: "À l'hôpital",
     subtitle: "Kit de médiation",
@@ -142,9 +116,36 @@ export const projects = [
     categories: ["objets", "pedagogie"],
     discipline: "Objet pédagogique",
     materials: "Pièces découpées, couleur",
-    cover: "/media/corps.jpg",
+    frame: "portrait",
+    cover: "/magnet-symptome/corps.jpg",
     coverAlt:
-      "Plateau blanc où l'on assemble un corps simplifié : poumons, organes colorés et une bulle « yeux rouges »",
+      "Sur un tableau blanc, une silhouette d'enfant et des poumons que l'on pose, avec une bulle « yeux rouges »",
+    images: [
+      {
+        src: "/magnet-symptome/corps.jpg",
+        alt: "Sur un tableau blanc, une silhouette d'enfant et des poumons que l'on pose, avec une bulle « yeux rouges »",
+      },
+      {
+        src: "/magnet-symptome/corps-pose.jpg",
+        alt: "Pose de la silhouette violette sur le tableau, la tête déjà en place",
+      },
+      {
+        src: "/magnet-symptome/corps-plateau.jpg",
+        alt: "Tableau assemblé : silhouette, signes sur la peau, bulles et une coupe de gorge",
+      },
+      {
+        src: "/magnet-symptome/corps-table.png",
+        alt: "Pièces étalées sur une table : intestins, poumons, coupe de gorge et petits signes",
+      },
+      {
+        src: "/magnet-symptome/corps-aimants.png",
+        alt: "Aimants empilés : gonflement, yeux rouges, gorge qui gratte, rhinite, traitements",
+      },
+      {
+        src: "/magnet-symptome/corps-panneau.png",
+        alt: "Main qui place l'aimant « plusieurs signes ensemble », à côté des traitements",
+      },
+    ],
     lead: "Un corps en pièces, à recomposer. Pour dire où ça fait mal, montrer un organe, mettre un mot sur ce que l'on ressent.",
     sections: [
       {

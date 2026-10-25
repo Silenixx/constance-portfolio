@@ -14,7 +14,10 @@ const groups = [
     id: "communication",
     title: "Supports de communication",
     lead: "Livrets, affiches et roll-ups, à lire dans la page.",
-    items: [...booklets, ...posters],
+    shelves: [
+      { id: "livrets", label: "Livrets", items: booklets },
+      { id: "affiches", label: "Affiches et roll-ups", items: posters },
+    ],
     band: true,
   },
   {
@@ -44,11 +47,12 @@ export function Projects() {
             <h3>{group.title}</h3>
             <p>{group.lead}</p>
           </header>
-          {group.items.length > 0 ? (
+          {group.shelves ? (
+            <PageShelves shelves={group.shelves} onOpen={setCurrent} />
+          ) : group.items.length > 0 ? (
             <ProjectList
               items={group.items}
               priority={group.id === "pedagogiques"}
-              pages={group.id === "communication"}
               logos={group.id === "logos"}
               onOpen={setCurrent}
             />
@@ -249,8 +253,44 @@ function Gallery({ frames, className, label, priority, width, height, onOpen, ke
   );
 }
 
-function ProjectList({ items, priority, pages, logos, onOpen }) {
-  const className = [styles.list, pages && styles.pages, logos && styles.logos]
+function PageShelves({ shelves, onOpen }) {
+  return (
+    <div className={styles.shelves}>
+      {shelves.map((shelf) => (
+        <div key={shelf.id}>
+          <p className={styles.shelfLabel}>{shelf.label}</p>
+          <div className={styles.shelf}>
+            {shelf.items.map((item) => (
+              <button
+                key={item.slug}
+                type="button"
+                className={styles.page}
+                onClick={() => onOpen(item)}
+              >
+                <span className={styles.pageFrame}>
+                  <img
+                    src={item.cover}
+                    alt=""
+                    width={item.coverWidth}
+                    height={item.coverHeight}
+                    loading="lazy"
+                  />
+                </span>
+                <span className={styles.pageCopy}>
+                  <span className={styles.pageTitle}>{item.title}</span>
+                  <span className={styles.pageKind}>{item.materials}</span>
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ProjectList({ items, priority, logos, onOpen }) {
+  const className = [styles.list, logos && styles.logos]
     .filter(Boolean)
     .join(" ");
 
@@ -261,7 +301,14 @@ function ProjectList({ items, priority, pages, logos, onOpen }) {
         return (
         <article
           key={project.slug}
-          className={!logos && index % 2 === 1 ? styles.flip : undefined}
+          className={
+            [
+              !logos && index % 2 === 1 ? styles.flip : "",
+              project.frame === "portrait" ? styles.portrait : "",
+            ]
+              .filter(Boolean)
+              .join(" ") || undefined
+          }
         >
           {frames.length > 1 ? (
             <Gallery
