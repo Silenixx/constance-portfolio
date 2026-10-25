@@ -46,7 +46,7 @@ Inclus dans `traefik/deploytotal.sh`.
 ## Fonctionnalités
 
 - Page unique, navigation par ancres
-- Trois familles dans les projets : outils pédagogiques (photos dans `public/media/`), supports de communication (six livrets dans `public/livret/`, cinq affiches dans `public/affiche/`, aperçus dans `public/media/livrets/` et `public/media/affiches/`), logos. Lecture dans la page et téléchargement.
+- Trois familles dans les projets : outils pédagogiques (`public/projets/<projet>/`), supports de communication (`public/communication/<projet>/`, PDF et aperçu ensemble), logos (`public/logos/<projet>/`). Lecture dans la page et téléchargement.
 - Parcours, formation, compétences, contact (mail, téléphone, Instagram, LinkedIn)
 
 ---
