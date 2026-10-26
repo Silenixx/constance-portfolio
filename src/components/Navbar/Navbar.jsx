@@ -70,7 +70,7 @@ export function Navbar() {
       <a className="skip" href="#contenu">
         Aller au contenu
       </a>
-      <a className={styles.wordmark} href="#hero" onClick={close}>
+      <a className={styles.wordmark} href="#presentation" onClick={close}>
         Portfolio
       </a>
       <nav className={styles.links} aria-label="Sections">

@@ -1,5 +1,4 @@
 import { Navbar } from "./components/Navbar/Navbar";
-import { Hero } from "./components/Hero/Hero";
 import { Presentation } from "./components/Presentation/Presentation";
 import { Projects } from "./components/Projects/Projects";
 import { Formation } from "./components/Formation/Formation";
@@ -13,7 +12,6 @@ export default function App() {
     <>
       <Navbar />
       <main id="contenu">
-        <Hero />
         <Presentation />
         <Experience />
         <Projects />

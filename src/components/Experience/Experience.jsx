@@ -9,9 +9,7 @@ export function Experience() {
       <ol>
         {experience.map((item) => (
           <li key={`${item.year}-${item.title}`}>
-            <div className={styles.meta}>
-              <span className={styles.year}>{item.year}</span>
-            </div>
+            <span className={styles.year}>{item.year}</span>
             <div>
               <strong>{item.title}</strong>
               <p className={styles.place}>{item.place}</p>

@@ -23,8 +23,8 @@ export const nav = [
 export const projects = [
   {
     slug: "fruits-a-coque",
-    title: "Fruits à coque",
-    subtitle: "L'arachide et les fruits à coque",
+    title: "Mon herbier des fruits à coque",
+    subtitle: "Reconnaître les fruits à coque",
     categories: ["objets", "pedagogie"],
     discipline: "Objet pédagogique",
     materials: "Contreplaqué gravé, résine",
@@ -49,26 +49,12 @@ export const projects = [
         alt: "Enfant qui tient un cylindre de résine avec une cacahuète, au-dessus du plateau",
       },
     ],
-    lead: "Un plateau pour nommer, reconnaître et ranger. Chaque cylindre de résine conserve un fruit réel ; chaque alvéole en porte le nom gravé.",
-    sections: [
-      {
-        title: "Intention",
-        body: "Rendre visible ce que l'on croque d'habitude sans le regarder. La noix, l'amande, la pistache, la noisette, le pignon ou la noix du Brésil deviennent des pièces que l'on soulève, compare et replace.",
-      },
-      {
-        title: "Usage",
-        body: "L'objet se manipule à plusieurs. On sort un cylindre, on lit le nom, on cherche la place. Le geste de classer est le geste d'apprendre : rien ne s'explique mieux qu'en le tenant.",
-      },
-      {
-        title: "Matière",
-        body: "Contreplaqué clair, lettres gravées, cylindres transparents coulés autour des fruits. La résine fige la matière organique sans la masquer : on voit la coque, la chair, la coupe.",
-      },
-    ],
+    lead: "Ce projet s’adresse aux enfants souffrant d’allergies alimentaires, et vise à leur apprendre à reconnaître les différents fruits à coque. J’ai voulu ici privilégier des inclusions en résine afin de figer le fruit à coque et de donner une dimension plus ludique à cet exercice. La résine permet ici de donner une autre dimension aux fruits à coque, elle leur donne un statut plus précieux. L’enfant va pouvoir manipuler ces pièces en les observant sous tous les angles afin de pouvoir ensuite les nommer. L’effet loupe créé par la résine accentue la dimension d’observation et transforme cet apprentissage en véritable jeu d’enquête.",
   },
   {
     slug: "a-l-hopital",
-    title: "À l'hôpital",
-    subtitle: "Kit de médiation",
+    title: "Raconte-moi ton histoire",
+    subtitle: "Dire son quotidien",
     categories: ["objets", "pedagogie"],
     discipline: "Objet de médiation",
     materials: "Bois découpé, couleur",
@@ -93,26 +79,12 @@ export const projects = [
         alt: "Main qui écrit au feutre sur une bulle, à côté des jetons joie, peur, confiance et colère",
       },
     ],
-    lead: "Une saynète pour parler de l'hôpital avant d'y être, ou pendant qu'on y est. Une façade, des personnages, des mots que l'on peut écrire et montrer.",
-    sections: [
-      {
-        title: "Intention",
-        body: "L'hôpital est souvent un lieu que l'on subit sans image. Ici il devient un décor à hauteur d'enfant : on place les médecins, on nomme Lucas, Lucie ou Zoé, on pose la peur sur la table.",
-      },
-      {
-        title: "Usage",
-        body: "Les pièces tiennent debout. Une bulle accueille « j'ai peur », des jetons portent la peur ou la colère, une forme nomme le test de provocation orale. Le feutre écrit, s'efface, laisse la place à une autre phrase.",
-      },
-      {
-        title: "Matière",
-        body: "Bois découpé, teintes douces — ocre, sauge, lilas — socles circulaires. La couleur distingue les rôles sans imiter un jouet médical. Chaque silhouette reste simple, pour que l'histoire puisse changer.",
-      },
-    ],
+    lead: "Cet outil aide les enfants souffrant d’allergies alimentaires à s’exprimer sur leur quotidien. Le médecin met en scène différentes situations en combinant un lieu, un acteur et un sujet. À partir de ces scénarios, l’enfant dispose d’une palette d’éléments de langage, composée d’une bulle libre et de différentes émotions, pour raconter ses expériences et exprimer son ressenti. L’objectif est de faciliter les échanges entre l’enfant et le médecin afin de mieux comprendre son quotidien et son environnement.",
   },
   {
     slug: "le-corps-explique",
-    title: "Le corps expliqué",
-    subtitle: "Plateau anatomique",
+    title: "Docteur qu’est-ce que j’ai ?",
+    subtitle: "Les symptômes d’une réaction",
     categories: ["objets", "pedagogie"],
     discipline: "Objet pédagogique",
     materials: "Pièces découpées, couleur",
@@ -146,26 +118,12 @@ export const projects = [
         alt: "Main qui place l'aimant « plusieurs signes ensemble », à côté des traitements",
       },
     ],
-    lead: "Un corps en pièces, à recomposer. Pour dire où ça fait mal, montrer un organe, mettre un mot sur ce que l'on ressent.",
-    sections: [
-      {
-        title: "Intention",
-        body: "La planche est une table de conversation. Les organes se posent, se retirent, se déplacent. Une bulle peut dire « yeux rouges ». Le savoir redevient quelque chose que l'on peut tenir.",
-      },
-      {
-        title: "Usage",
-        body: "On assemble, on retire, on pointe. L'adulte et l'enfant regardent le même objet. Le geste remplace le schéma que l'on subit dans un livret.",
-      },
-      {
-        title: "Matière",
-        body: "Pièces colorées découpées, silhouette simplifiée, plateau clair. La couleur sépare les systèmes du corps sans chercher le réalisme d'un manuel. La forme reste lisible de loin, sur une table.",
-      },
-    ],
+    lead: "Cet outil pédagogique permet aux enfants de reconnaître les symptômes d’une réaction allergique et de distinguer ceux qui sont graves de ceux qui sont à surveiller. Conçu sous forme de magnets, il associe une silhouette neutre à des visuels explicatifs adaptés aux enfants. Ces derniers participent activement en plaçant des bulles effaçables sur le tableau pour identifier les différents symptômes. Le médecin reprend ensuite les éléments abordés en les remplaçant par des symboles sur la silhouette. Des éléments « zoom » viennent compléter le dispositif en illustrant les mécanismes internes du corps, pour faciliter la compréhension des réactions allergiques.",
   },
   {
     slug: "les-organes",
-    title: "Les organes",
-    subtitle: "Aimants anatomiques",
+    title: "Visualiser le corps et ses mécanismes",
+    subtitle: "Organes, planches, tabliers",
     categories: ["objets", "pedagogie"],
     discipline: "Objet pédagogique",
     materials: "Pièces découpées, couleur",
@@ -190,21 +148,7 @@ export const projects = [
         alt: "Deux tailles de l'appareil génital : utérus, trompes, ovaires et vagin, sur une feuille blanche",
       },
     ],
-    lead: "Des organes que l'on pose sur une silhouette. Chaque pièce porte son nom. On voit où elle se tient, et à côté de quoi.",
-    sections: [
-      {
-        title: "Intention",
-        body: "Le ventre reste souvent un volume sans dedans. Ici il se défait en pièces : foie, estomac, côlon, utérus, vessie. On reconnaît la forme, puis on lit le mot écrit dessus.",
-      },
-      {
-        title: "Usage",
-        body: "On étale les pièces, puis on les place sur le dessin du corps, de face et de profil. L'utérus existe en deux tailles : le schéma dans l'ensemble, et la pièce que l'on regarde de plus près.",
-      },
-      {
-        title: "Matière",
-        body: "Découpes colorées, lettres imprimées, trait noir pour la silhouette. Le jaune du foie, le brun du côlon, le rose de l'utérus distinguent les systèmes. Les pièces restent simples, pour que l'on puisse les déplacer.",
-      },
-    ],
+    lead: "Plusieurs outils pédagogiques conçus avec les soignants pour aider les patients à mieux comprendre leur pathologie et le fonctionnement de leur corps. À travers des magnets organes à replacer, des planches anatomiques illustrant les liens entre le cerveau et les organes ou encore des tabliers pour représenter leur fonctionnement interne, ces supports rendent les explications médicales plus concrètes et accessibles. Ils permettent également de visualiser l’action des traitements et de mieux comprendre leur rôle.",
   },
   {
     slug: "silhouette-douleur",
@@ -890,43 +834,37 @@ export const experience = [
     year: "2026",
     title: "Graphiste, service communication",
     place: "CHRU de Nancy",
-    detail:
-      "Un jour par semaine pendant six mois. Mise en page de livrets et d'affiches, conception de logos, création d'infographie.",
+    detail: "Un jour par semaine. Livrets, affiches, logos, infographies.",
   },
   {
     year: "oct. 2024 — déc. 2026",
     title: "Designer en santé",
     place: "CDD, CHRU de Nancy",
-    detail:
-      "Outils pédagogiques pour les ateliers d'éducation thérapeutique du patient : puzzles en magnet, planches anatomiques et jeux de cartes, conçus avec les équipes. Visuels imprimés, flyers, livrets et outils graphiques.",
+    detail: "Outils d’ETP avec les équipes, visuels et livrets.",
   },
   {
     year: "nov. 2023 — mai 2024",
     title: "Stage, outils pédagogiques",
     place: "CHRU de Nancy",
-    detail:
-      "Projet de diplôme : mallette de jeux pédagogiques pour un programme d'ETP destiné aux enfants. Prototypage, fabrication et tests avec les soignants et les enfants.",
+    detail: "Mallette de jeux d’ETP pour les enfants. Prototypes et tests.",
   },
   {
     year: "juin — août 2023",
     title: "Stage, communication et graphisme",
     place: "CHRU de Nancy",
-    detail:
-      "Visuels, illustrations et livrets à destination des patients. Logos et mascottes pour les programmes d'éducation thérapeutique.",
+    detail: "Visuels, livrets, logos et mascottes.",
   },
   {
     year: "avr. — mai 2023",
     title: "Stage, jeux de société pédagogique",
     place: "Format Ludique",
-    detail:
-      "Recherche de matériaux et de formes pour le packaging des jeux, en écoconception. Prospection auprès des fabricants. Croquis et dispositifs scénographiques pour les salons.",
+    detail: "Packaging en écoconception et scénographie de salons.",
   },
   {
     year: "juin 2021",
     title: "Stage, design d'espace, d'objet et communication",
     place: "Studio Shore.oo",
-    detail:
-      "Supports de communication et prototypes pour une série d'objets sensoriels. Mobilier sur mesure pour un espace en EHPAD, à partir des besoins des personnes âgées.",
+    detail: "Objets sensoriels et mobilier pour un EHPAD.",
   },
 ];
 
