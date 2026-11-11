@@ -1,85 +1,85 @@
 .footer {
-  padding: clamp(64px, 9vw, 112px) var(--pad) 28px;
+  position: relative;
+  margin: 0 var(--gutter) var(--gutter);
+  padding: clamp(40px, 6vw, 88px) calc(var(--pad) - var(--gutter)) var(--edge);
+  border-radius: var(--radius-lg);
   background: var(--ink);
-  color: var(--paper);
-  scroll-margin-top: 88px;
+  color: var(--page);
+  overflow: hidden;
+  scroll-margin-top: var(--header);
 }
 
-.kicker {
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(246, 241, 234, 0.58);
+.shape {
+  position: absolute;
+  top: clamp(-70px, -5vw, -30px);
+  right: clamp(-40px, -3vw, -20px);
+  width: clamp(110px, 17vw, 240px);
+  color: var(--purple);
+  transform: rotate(14deg);
 }
 
 .footer h2 {
-  margin-top: 14px;
-  max-width: 18ch;
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(1.7rem, 3vw, 2.5rem);
-  line-height: 1.08;
-  letter-spacing: -0.03em;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--lilac);
 }
 
 .mail {
+  position: relative;
   display: inline-block;
-  margin-top: 40px;
-  max-width: 100%;
-  font-family: var(--serif);
-  font-size: clamp(1.7rem, 4.4vw, 3.8rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  margin-top: 12px;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(1.45rem, 6vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
   overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.14em;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.2s ease;
 }
 
-.mail:hover { color: var(--ochre-wash); }
+.mail:hover {
+  text-decoration-color: var(--orange);
+}
 
 .ways {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(18px, 3vw, 40px);
-  margin-top: 48px;
-  padding-top: 22px;
-  border-top: 1px solid rgba(246, 241, 234, 0.22);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: clamp(28px, 4vw, 56px);
 }
 
-.ways span {
+.ways a {
   display: block;
-  margin-bottom: 6px;
-  font-family: var(--sans);
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(246, 241, 234, 0.55);
+  padding: 11px 18px;
+  border: 1.5px solid color-mix(in srgb, var(--page) 55%, transparent);
+  border-radius: 999px;
+  font-weight: 500;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
-.ways a,
-.ways p {
-  font-family: var(--serif);
-  font-size: clamp(1.25rem, 1.8vw, 1.6rem);
-  letter-spacing: -0.02em;
-  line-height: 1.15;
+.ways a:hover {
+  background: var(--page);
+  border-color: var(--page);
+  color: var(--ink);
 }
-
-.ways a:hover { color: var(--ochre-wash); }
 
 .meta {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 16px;
-  margin-top: 56px;
-  padding-right: 72px;
-  color: rgba(246, 241, 234, 0.62);
-  font-size: 0.9rem;
+  gap: 8px 24px;
+  margin-top: clamp(48px, 8vw, 110px);
+  font-size: 0.88rem;
+  color: color-mix(in srgb, var(--page) 65%, transparent);
 }
 
-@media (max-width: 800px) {
-  .ways { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 520px) {
-  .ways { grid-template-columns: 1fr; }
-  .meta { flex-direction: column; }
+.footer :focus-visible {
+  outline-color: var(--orange);
 }

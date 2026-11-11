@@ -1,0 +1,44 @@
+.pieces {
+  position: absolute;
+  inset: 0 0 auto;
+  height: var(--stage);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.piece {
+  position: absolute;
+  width: calc(clamp(58px, 9vw, 120px) * var(--scale, 1));
+  aspect-ratio: 1;
+  pointer-events: auto;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  /* L'ombre nette donne l'épaisseur d'une pièce découpée. */
+  filter: drop-shadow(0 5px 0 rgba(34, 26, 44, 0.16));
+  transition: filter 0.18s ease, transform 0.18s ease;
+}
+
+.piece svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.piece:hover {
+  filter: drop-shadow(0 8px 0 rgba(34, 26, 44, 0.16));
+}
+
+.held {
+  cursor: grabbing;
+  filter: drop-shadow(0 16px 6px rgba(34, 26, 44, 0.2));
+  transition: filter 0.18s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .piece,
+  .held {
+    transition: none;
+  }
+}

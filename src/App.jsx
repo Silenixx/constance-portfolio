@@ -1,25 +1,22 @@
-import { Navbar } from "./components/Navbar/Navbar";
-import { Presentation } from "./components/Presentation/Presentation";
-import { Projects } from "./components/Projects/Projects";
-import { Formation } from "./components/Formation/Formation";
-import { Experience } from "./components/Experience/Experience";
-import { Skills } from "./components/Skills/Skills";
+import { Header } from "./components/Header/Header";
+import { Hero } from "./components/Hero/Hero";
+import { Works } from "./components/Works/Works";
+import { About } from "./components/About/About";
 import { Contact } from "./components/Contact/Contact";
-import { BackToTop } from "./components/BackToTop/BackToTop";
 
 export default function App() {
   return (
     <>
-      <Navbar />
-      <main id="contenu">
-        <Presentation />
-        <Experience />
-        <Projects />
-        <Formation />
-        <Skills />
-        <Contact />
+      <a className="skip" href="#projets">
+        Aller aux projets
+      </a>
+      <Header />
+      <main>
+        <Hero />
+        <Works />
+        <About />
       </main>
-      <BackToTop />
+      <Contact />
     </>
   );
 }

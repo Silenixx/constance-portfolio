@@ -1,0 +1,89 @@
+.hero {
+  position: relative;
+  display: grid;
+  align-content: end;
+  min-height: min(calc(100svh - var(--header) - var(--gutter)), 760px);
+  margin: 0 var(--gutter);
+  --stage: clamp(200px, 30svh, 300px);
+  padding: var(--stage) calc(var(--pad) - var(--gutter)) var(--edge);
+  border-radius: var(--radius-lg);
+  background: var(--lilac);
+  overflow: hidden;
+  scroll-margin-top: var(--header);
+}
+
+.hint {
+  position: absolute;
+  top: clamp(16px, 2.4vw, 28px);
+  left: calc(var(--pad) - var(--gutter));
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.hint::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: var(--purple);
+}
+
+.copy {
+  position: relative;
+}
+
+.copy h1 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(3.4rem, 12.5vw, 10.5rem);
+  line-height: 0.82;
+  letter-spacing: -0.045em;
+}
+
+.copy h1 span {
+  display: block;
+}
+
+.copy h1 span:last-child {
+  color: var(--purple);
+}
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px 48px;
+  margin-top: clamp(24px, 3.5vw, 48px);
+}
+
+.lead {
+  max-width: 34ch;
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  line-height: 1.35;
+  font-weight: 500;
+  text-wrap: pretty;
+}
+
+.meta {
+  display: flex;
+  gap: 8px;
+}
+
+.meta span {
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--page);
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    --stage: 48svh;
+  }
+}

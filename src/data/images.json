@@ -1,0 +1,306 @@
+{
+  "/projets/a-l-hopital/hopital-feutre.jpg": {
+    "w": 1920,
+    "h": 1080
+  },
+  "/projets/a-l-hopital/hopital-pieces.jpg": {
+    "w": 2000,
+    "h": 1333
+  },
+  "/projets/a-l-hopital/hopital-table.jpg": {
+    "w": 1920,
+    "h": 1080
+  },
+  "/projets/a-l-hopital/hopital.jpg": {
+    "w": 2000,
+    "h": 1333
+  },
+  "/projets/alphabet-sport/affiche.png": {
+    "w": 4961,
+    "h": 7016
+  },
+  "/projets/carte-debat/cartes.png": {
+    "w": 4895,
+    "h": 3631
+  },
+  "/projets/cartes-emotions/emotion-colere.png": {
+    "w": 1748,
+    "h": 2480
+  },
+  "/projets/cartes-emotions/emotion-confiance.png": {
+    "w": 1748,
+    "h": 2480
+  },
+  "/projets/cartes-emotions/emotion-degout.png": {
+    "w": 1748,
+    "h": 2480
+  },
+  "/projets/cartes-emotions/emotion-embarras.png": {
+    "w": 1748,
+    "h": 2480
+  },
+  "/projets/cartes-emotions/emotion-exasperation.png": {
+    "w": 1748,
+    "h": 2480
+  },
+  "/projets/cartes-emotions/emotion-fatigue.png": {
+    "w": 1748,
+    "h": 2480
+  },
+  "/projets/cartes-emotions/emotion-frustration.png": {
+    "w": 1748,
+    "h": 2480
+  },
+  "/projets/cartes-emotions/emotion-inquietude.png": {
+    "w": 1748,
+    "h": 2480
+  },
+  "/projets/cartes-emotions/emotion-insatisfaction.png": {
+    "w": 1748,
+    "h": 2480
+  },
+  "/projets/cartes-emotions/emotion-joie.png": {
+    "w": 1748,
+    "h": 2480
+  },
+  "/projets/cartes-emotions/emotion-peur.png": {
+    "w": 1748,
+    "h": 2480
+  },
+  "/projets/cartes-emotions/emotion-pleur.png": {
+    "w": 1748,
+    "h": 2480
+  },
+  "/projets/cartes-emotions/emotion-satisfaction.png": {
+    "w": 1748,
+    "h": 2480
+  },
+  "/projets/cartes-emotions/emotion-stress.png": {
+    "w": 1748,
+    "h": 2480
+  },
+  "/projets/cartes-emotions/emotion-tristesse.png": {
+    "w": 1748,
+    "h": 2480
+  },
+  "/projets/chambre-des-erreurs/chambre-table.png": {
+    "w": 7024,
+    "h": 4350
+  },
+  "/projets/chambre-des-erreurs/chambre-torse.png": {
+    "w": 3508,
+    "h": 4961
+  },
+  "/projets/chambre-des-erreurs/chambre.png": {
+    "w": 4792,
+    "h": 3443
+  },
+  "/projets/fruits-a-coque/fruits-mains.jpg": {
+    "w": 2000,
+    "h": 1125
+  },
+  "/projets/fruits-a-coque/fruits-pose.jpg": {
+    "w": 1920,
+    "h": 1080
+  },
+  "/projets/fruits-a-coque/fruits-tenue.jpg": {
+    "w": 1920,
+    "h": 1080
+  },
+  "/projets/fruits-a-coque/fruits.jpg": {
+    "w": 2000,
+    "h": 1333
+  },
+  "/projets/jeu-stomie/jeu-stomie-chemin.png": {
+    "w": 6000,
+    "h": 4000
+  },
+  "/projets/jeu-stomie/jeu-stomie-question.png": {
+    "w": 6000,
+    "h": 4000
+  },
+  "/projets/jeu-stomie/jeu-stomie.png": {
+    "w": 2048,
+    "h": 1365
+  },
+  "/projets/le-corps-explique/corps-aimants.png": {
+    "w": 1536,
+    "h": 2048
+  },
+  "/projets/le-corps-explique/corps-panneau.png": {
+    "w": 1536,
+    "h": 2048
+  },
+  "/projets/le-corps-explique/corps-plateau.jpg": {
+    "w": 8688,
+    "h": 5792
+  },
+  "/projets/le-corps-explique/corps-pose.jpg": {
+    "w": 8688,
+    "h": 5792
+  },
+  "/projets/le-corps-explique/corps-table.png": {
+    "w": 1920,
+    "h": 1080
+  },
+  "/projets/le-corps-explique/corps.jpg": {
+    "w": 1333,
+    "h": 2000
+  },
+  "/projets/les-organes/organes-profil.png": {
+    "w": 3060,
+    "h": 4080
+  },
+  "/projets/les-organes/organes-uterus.png": {
+    "w": 3060,
+    "h": 4080
+  },
+  "/projets/les-organes/organes-ventre.png": {
+    "w": 3060,
+    "h": 4080
+  },
+  "/projets/les-organes/organes.png": {
+    "w": 4080,
+    "h": 3060
+  },
+  "/projets/magnet-asthme/asthme-cartes.png": {
+    "w": 1536,
+    "h": 2048
+  },
+  "/projets/magnet-asthme/asthme.png": {
+    "w": 1536,
+    "h": 2048
+  },
+  "/projets/memory-diet/cartes.png": {
+    "w": 6815,
+    "h": 6672
+  },
+  "/projets/memory-fruit-a-coque/cartes-main.png": {
+    "w": 6000,
+    "h": 4000
+  },
+  "/projets/memory-fruit-a-coque/cartes.png": {
+    "w": 6000,
+    "h": 4000
+  },
+  "/projets/memory-fruit-a-coque/plateau.png": {
+    "w": 6000,
+    "h": 4000
+  },
+  "/projets/silhouete-douleur/silhouette-attelles.png": {
+    "w": 3508,
+    "h": 4961
+  },
+  "/projets/silhouete-douleur/silhouette-corps.png": {
+    "w": 3508,
+    "h": 4961
+  },
+  "/projets/silhouete-douleur/silhouette-douleur.png": {
+    "w": 3508,
+    "h": 4961
+  },
+  "/projets/stomie/irrigation.png": {
+    "w": 940,
+    "h": 1481
+  },
+  "/projets/stomie/pieces.png": {
+    "w": 917,
+    "h": 703
+  },
+  "/projets/stomie/poche-pleine.png": {
+    "w": 940,
+    "h": 1481
+  },
+  "/projets/stomie/poche-vide.png": {
+    "w": 940,
+    "h": 1481
+  },
+  "/projets/stomie/stomie.png": {
+    "w": 940,
+    "h": 1481
+  },
+  "/projets/trivial-poursuit/assiette.png": {
+    "w": 3423,
+    "h": 2349
+  },
+  "/projets/trivial-poursuit/cartes.png": {
+    "w": 4158,
+    "h": 5221
+  },
+  "/projets/trivial-poursuit/plateau.png": {
+    "w": 7654,
+    "h": 5517
+  },
+  "/communication/chirurgie-ambulatoire/parcours-uca.jpg": {
+    "w": 1137,
+    "h": 1600
+  },
+  "/communication/diabete/diabete.jpg": {
+    "w": 1132,
+    "h": 1600
+  },
+  "/communication/epilepsie/epilepsie.jpg": {
+    "w": 1127,
+    "h": 1600
+  },
+  "/communication/esclor/esclor.jpg": {
+    "w": 641,
+    "h": 1600
+  },
+  "/communication/etp/utep.jpg": {
+    "w": 641,
+    "h": 1600
+  },
+  "/communication/parcours-thrombose/parcours-thrombose.jpg": {
+    "w": 1132,
+    "h": 1600
+  },
+  "/communication/sclerodermie/sclerodermie.jpg": {
+    "w": 1132,
+    "h": 1600
+  },
+  "/communication/stomie/stomie.jpg": {
+    "w": 1600,
+    "h": 1132
+  },
+  "/communication/tenue-bloc/tenue-bloc.jpg": {
+    "w": 1132,
+    "h": 1600
+  },
+  "/communication/thrombose/thrombose.jpg": {
+    "w": 1600,
+    "h": 1132
+  },
+  "/communication/tiques/tiques.jpg": {
+    "w": 1132,
+    "h": 1600
+  },
+  "/logos/educ-epi/educ-epi-mascotte.png": {
+    "w": 2400,
+    "h": 1543
+  },
+  "/logos/educard/educard.jpg": {
+    "w": 2200,
+    "h": 1935
+  },
+  "/logos/etp-game/etp-game-mascotte.jpg": {
+    "w": 2200,
+    "h": 1279
+  },
+  "/logos/etp-game/etp-game.jpg": {
+    "w": 2200,
+    "h": 773
+  },
+  "/logos/resutep/resutep-variantes.jpg": {
+    "w": 2200,
+    "h": 1651
+  },
+  "/logos/resutep/resutep.png": {
+    "w": 1436,
+    "h": 2000
+  },
+  "/constance.jpeg": {
+    "w": 1200,
+    "h": 1439
+  }
+}

@@ -46,8 +46,11 @@ Inclus dans `traefik/deploytotal.sh`.
 ## Fonctionnalités
 
 - Page unique, navigation par ancres
-- Trois familles dans les projets : outils pédagogiques (`public/projets/<projet>/`), supports de communication (`public/communication/<projet>/`, PDF et aperçu ensemble), logos (`public/logos/<projet>/`). Lecture dans la page et téléchargement.
-- Parcours, formation, compétences, contact (mail, téléphone, Instagram, LinkedIn)
+- Accueil avec des pièces découpées que l’on peut déplacer
+- Grille de projets filtrable (objets, jeux, illustration, édition, identités). Une fiche par projet : galerie, texte, lien vers le PDF pour les livrets et affiches.
+- À propos : parcours, formation, compétences. Contact (mail, téléphone, Instagram, LinkedIn, CV).
+- Tout le contenu (textes, projets, parcours) est dans `src/data/site.js`.
+- Images : les originaux restent dans `public/projets/`, `public/communication/` et `public/logos/`. Le site affiche des versions web (`public/img/`, WebP 640 et 1600 px) fabriquées par `npm run images`. À relancer après l’ajout d’une image, puis commiter `public/img/` et `src/data/images.json`.
 
 ---
 

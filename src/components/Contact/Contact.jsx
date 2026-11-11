@@ -1,58 +1,43 @@
 import styles from "./Contact.module.css";
 import { site } from "../../data/site.js";
+import { Shape } from "../Pieces/Pieces.jsx";
 
-const ways = [
-  { label: "Appeler", value: site.phone, href: `tel:${site.phoneHref}` },
-  {
-    label: "Instagram",
-    value: site.instagramHandle,
-    href: site.instagram,
-    external: true,
-  },
-  {
-    label: "LinkedIn",
-    value: site.linkedinHandle,
-    href: site.linkedin,
-    external: true,
-  },
-];
+const outside = { target: "_blank", rel: "noreferrer noopener" };
 
 export function Contact() {
   return (
     <footer className={styles.footer} id="contact">
-      <p className={styles.kicker}>Contact</p>
-      <h2>Pour un objet, un atelier, une collaboration.</h2>
+      <Shape name="etoile" className={styles.shape} />
+      <h2>Contact</h2>
       <a className={styles.mail} href={`mailto:${site.email}`}>
         {site.email}
       </a>
       <ul className={styles.ways}>
-        {ways.map((item) => (
-          <li key={item.label}>
-            <a
-              href={item.href}
-              {...(item.external
-                ? { target: "_blank", rel: "noreferrer noopener" }
-                : {})}
-            >
-              <span>{item.label}</span>
-              {item.value}
-            </a>
-          </li>
-        ))}
         <li>
-          <p>
-            <span>Lieu</span>
-            {site.place}
-          </p>
+          <a href={`tel:${site.phoneHref}`}>{site.phone}</a>
+        </li>
+        <li>
+          <a href={site.instagram} {...outside}>
+            Instagram
+          </a>
+        </li>
+        <li>
+          <a href={site.linkedin} {...outside}>
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href={encodeURI(site.cv)} {...outside}>
+            CV (PDF)
+          </a>
         </li>
       </ul>
-      <div className={styles.meta}>
-        <p>
-          {site.name}
-          <span> · {site.role}</span>
-        </p>
-        <p>© {new Date().getFullYear()}</p>
-      </div>
+      <p className={styles.meta}>
+        <span>
+          {site.name} · {site.role} · {site.place}
+        </span>
+        <span>© {new Date().getFullYear()}</span>
+      </p>
     </footer>
   );
 }
