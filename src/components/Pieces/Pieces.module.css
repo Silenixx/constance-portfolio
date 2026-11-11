@@ -26,8 +26,16 @@
   overflow: visible;
 }
 
-.piece:hover {
-  filter: drop-shadow(0 8px 0 rgba(34, 26, 44, 0.16));
+@media (hover: hover) {
+  .piece:hover {
+    filter: drop-shadow(0 8px 0 rgba(34, 26, 44, 0.16));
+  }
+}
+
+@media (orientation: landscape) and (max-height: 520px) {
+  .piece {
+    width: calc(clamp(44px, 14vh, 80px) * var(--scale, 1));
+  }
 }
 
 .held {

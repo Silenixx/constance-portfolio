@@ -10,7 +10,9 @@ export function Contact() {
       <Shape name="etoile" className={styles.shape} />
       <h2>Contact</h2>
       <a className={styles.mail} href={`mailto:${site.email}`}>
-        {site.email}
+        {/* Si la ligne doit casser, elle casse avant l'arobase, pas au milieu d'un mot. */}
+        {site.email.split("@")[0]}
+        <wbr />@{site.email.split("@")[1]}
       </a>
       <ul className={styles.ways}>
         <li>

@@ -5,6 +5,7 @@ import { Picture } from "../Picture/Picture.jsx";
 
 export function WorkDialog({ work, position, onClose, onPrev, onNext }) {
   const ref = useRef(null);
+  const swipe = useRef(null);
   const [shown, setShown] = useState(0);
   const count = work.images.length;
   const [src, alt] = work.images[shown];
@@ -37,8 +38,33 @@ export function WorkDialog({ work, position, onClose, onPrev, onNext }) {
       }}
     >
       <div className={styles.sheet}>
+        <div className={styles.bar}>
+          <span>{position}</span>
+          <button type="button" className={styles.close} onClick={onClose}>
+            Fermer
+          </button>
+        </div>
+
         <div className={styles.stage} style={{ "--tone": tones[work.tone] }}>
-          <div className={styles.frame}>
+          <div
+            className={styles.frame}
+            // Au doigt : balayer vers la gauche ou la droite change d'image.
+            onPointerDown={(event) => {
+              if (event.pointerType === "mouse" || count < 2) return;
+              swipe.current = { x: event.clientX, y: event.clientY };
+            }}
+            onPointerUp={(event) => {
+              const start = swipe.current;
+              swipe.current = null;
+              if (!start) return;
+              const dx = event.clientX - start.x;
+              const dy = event.clientY - start.y;
+              if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.5) turn(dx < 0 ? 1 : -1);
+            }}
+            onPointerCancel={() => {
+              swipe.current = null;
+            }}
+          >
             <Picture key={src} src={src} alt={alt} eager sizes="(max-width: 860px) 100vw, 70vw" />
             {count > 1 && (
               <>
@@ -80,13 +106,6 @@ export function WorkDialog({ work, position, onClose, onPrev, onNext }) {
         </div>
 
         <div className={styles.info}>
-          <div className={styles.bar}>
-            <span>{position}</span>
-            <button type="button" className={styles.close} onClick={onClose}>
-              Fermer
-            </button>
-          </div>
-
           <p className={styles.label}>{work.kind}</p>
           <h2 id="fiche-titre">{work.title}</h2>
           {work.subtitle && <p className={styles.subtitle}>{work.subtitle}</p>}

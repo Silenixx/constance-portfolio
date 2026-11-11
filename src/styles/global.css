@@ -8,9 +8,12 @@
   --orange: #f08a2c;
   --header: 64px;
   --gutter: clamp(8px, 1vw, 14px);
+  /* Encoche des téléphones en paysage (0 ailleurs). */
+  --safe-x: max(env(safe-area-inset-left, 0px), env(safe-area-inset-right, 0px));
+  --gutter-x: calc(var(--gutter) + var(--safe-x));
   /* Marge latérale : au-delà de 1240px de contenu, elle grandit pour le centrer. */
   --edge: clamp(18px, 3.4vw, 52px);
-  --pad: max(var(--edge), calc((100vw - 1240px) / 2));
+  --pad: max(calc(var(--edge) + var(--safe-x)), calc((100vw - 1240px) / 2));
   --radius: 20px;
   --radius-lg: clamp(22px, 2.4vw, 34px);
   --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
@@ -51,6 +54,7 @@ body {
   font-family: var(--text);
   font-size: 17px;
   line-height: 1.55;
+  overflow-wrap: break-word;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -58,6 +62,13 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: rgba(90, 59, 184, 0.14);
+  touch-action: manipulation;
 }
 
 button {
@@ -98,6 +109,13 @@ a {
 
 .skip:focus {
   top: 12px;
+}
+
+/* Téléphone en paysage : l'en-tête prend moins de hauteur. */
+@media (orientation: landscape) and (max-height: 520px) {
+  :root {
+    --header: 52px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,12 +1,14 @@
 .footer {
   position: relative;
-  margin: 0 var(--gutter) var(--gutter);
-  padding: clamp(40px, 6vw, 88px) calc(var(--pad) - var(--gutter)) var(--edge);
+  margin: 0 var(--gutter-x) calc(var(--gutter) + env(safe-area-inset-bottom, 0px));
+  padding: clamp(40px, 6vw, 88px) calc(var(--pad) - var(--gutter-x)) var(--edge);
   border-radius: var(--radius-lg);
   background: var(--ink);
   color: var(--page);
   overflow: hidden;
   scroll-margin-top: var(--header);
+  /* L'adresse e-mail se dimensionne d'après la largeur du bloc. */
+  container-type: inline-size;
 }
 
 .shape {
@@ -32,18 +34,15 @@
   font-family: var(--display);
   font-weight: 800;
   font-size: clamp(1.45rem, 6vw, 4.5rem);
-  line-height: 1;
+  /* Assez petit pour tenir sur une ligne, quelle que soit la largeur. */
+  font-size: min(4.5rem, 7.1cqi);
+  line-height: 1.05;
   letter-spacing: -0.04em;
-  overflow-wrap: anywhere;
   text-decoration: underline;
   text-decoration-thickness: 0.06em;
   text-underline-offset: 0.14em;
   text-decoration-color: transparent;
   transition: text-decoration-color 0.2s ease;
-}
-
-.mail:hover {
-  text-decoration-color: var(--orange);
 }
 
 .ways {
@@ -63,9 +62,20 @@
   transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
-.ways a:hover {
+@media (hover: hover) {
+  .mail:hover {
+    text-decoration-color: var(--orange);
+  }
+
+  .ways a:hover {
+    background: var(--page);
+    border-color: var(--page);
+    color: var(--ink);
+  }
+}
+
+.ways a:active {
   background: var(--page);
-  border-color: var(--page);
   color: var(--ink);
 }
 
@@ -82,4 +92,10 @@
 
 .footer :focus-visible {
   outline-color: var(--orange);
+}
+
+@media (max-width: 420px) {
+  .ways a {
+    padding: 11px 16px;
+  }
 }

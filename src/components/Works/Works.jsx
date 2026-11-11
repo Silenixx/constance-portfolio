@@ -52,8 +52,8 @@ export function Works() {
                     eager={position < 3}
                     sizes={
                       wide
-                        ? "(max-width: 560px) 100vw, (max-width: 1200px) 66vw, 620px"
-                        : "(max-width: 560px) 100vw, (max-width: 860px) 50vw, (max-width: 1200px) 33vw, 310px"
+                        ? "(max-width: 860px) 100vw, (max-width: 1200px) 66vw, 620px"
+                        : "(max-width: 339px) 100vw, (max-width: 860px) 50vw, (max-width: 1200px) 33vw, 310px"
                     }
                   />
                   {work.images.length > 1 && (

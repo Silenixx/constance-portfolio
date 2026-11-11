@@ -74,10 +74,16 @@
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.actions a:first-child,
-.actions a:hover {
+.actions a:first-child {
   background: var(--ink);
   color: var(--page);
+}
+
+@media (hover: hover) {
+  .actions a:hover {
+    background: var(--ink);
+    color: var(--page);
+  }
 }
 
 .path {
@@ -165,5 +171,17 @@
   .rows li {
     grid-template-columns: minmax(0, 1fr);
     gap: 2px;
+  }
+
+  .portrait {
+    width: min(78%, 320px);
+  }
+
+  .sticker {
+    right: -9%;
+  }
+
+  .side {
+    gap: 28px;
   }
 }

@@ -24,14 +24,11 @@
 }
 
 .mark {
+  flex: none;
   width: 22px;
   height: 22px;
   color: var(--orange);
   transition: transform 0.4s ease;
-}
-
-.brand:hover .mark {
-  transform: rotate(90deg);
 }
 
 .links {
@@ -45,11 +42,34 @@
   border-radius: 999px;
   font-size: 0.95rem;
   font-weight: 500;
+  white-space: nowrap;
   transition: background-color 0.15s ease;
 }
 
-.links a:hover {
+@media (hover: hover) {
+  .brand:hover .mark {
+    transform: rotate(90deg);
+  }
+
+  .links a:hover {
+    background: var(--lilac);
+  }
+}
+
+.links a:active {
   background: var(--lilac);
+}
+
+/* Écran tactile : des cibles d'au moins 44px. */
+@media (pointer: coarse) {
+  .brand {
+    padding: 8px;
+    margin-left: -8px;
+  }
+
+  .links a {
+    padding: 12px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -60,6 +80,17 @@
   .mark {
     width: 28px;
     height: 28px;
+  }
+
+  .links {
+    gap: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .links a {
+    padding-inline: 9px;
+    font-size: 0.9rem;
   }
 }
 

@@ -33,18 +33,15 @@
   font-size: 0.95rem;
   font-weight: 500;
   line-height: 1.2;
+  white-space: nowrap;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .filter sup {
   margin-left: 5px;
-  font-size: 0.68em;
+  font-size: 0.72em;
   font-variant-numeric: tabular-nums;
   opacity: 0.6;
-}
-
-.filter:hover {
-  background: var(--lilac);
 }
 
 .filter[aria-pressed="true"] {
@@ -104,14 +101,31 @@
   filter: drop-shadow(0 4px 0 rgba(34, 26, 44, 0.12));
 }
 
-.card:hover .plate img,
 .card:focus-visible .plate img {
   transform: scale(1.04);
 }
 
-.card:hover .contain img,
-.card:focus-visible .contain img {
-  transform: scale(1.04) rotate(-1.5deg);
+/* Effets de survol : seulement avec une souris, sinon ils restent « collés » après un tap. */
+@media (hover: hover) {
+  .filter:hover {
+    background: var(--lilac);
+  }
+
+  .filter[aria-pressed="true"]:hover {
+    background: var(--ink);
+  }
+
+  .card:hover .plate img {
+    transform: scale(1.04);
+  }
+
+  .card:hover .contain img {
+    transform: scale(1.04) rotate(-1.5deg);
+  }
+}
+
+.card:active .plate {
+  opacity: 0.85;
 }
 
 .count {
@@ -151,24 +165,93 @@
   }
 }
 
+/* Tablette et téléphone : deux colonnes, la vignette vedette en pleine largeur. */
 @media (max-width: 860px) {
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .wide {
+    grid-row: auto;
+  }
+
+  .wide .plate {
+    flex: none;
+    aspect-ratio: 4 / 3;
+  }
 }
 
 @media (max-width: 560px) {
+  /* Les filtres tiennent sur une ligne qui défile au doigt, de bord à bord. */
+  .head {
+    display: grid;
+    gap: 16px;
+  }
+
+  .filters {
+    flex-wrap: nowrap;
+    margin: -6px calc(-1 * var(--pad));
+    padding: 6px var(--pad);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-padding-inline: var(--pad);
+    scrollbar-width: none;
+  }
+
+  .filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filters li {
+    flex: none;
+  }
+
+  .grid {
+    gap: 22px 10px;
+  }
+
+  .plate {
+    border-radius: 16px;
+  }
+
+  .contain img {
+    padding: 9%;
+  }
+
+  .count {
+    left: 8px;
+    bottom: 8px;
+    padding: 3px 8px;
+    font-size: 0.7rem;
+  }
+
+  .caption {
+    padding: 8px 2px 0;
+  }
+
+  .title {
+    font-size: 0.94rem;
+  }
+
+  .kind {
+    font-size: 0.78rem;
+  }
+}
+
+/* Très petit écran : une seule colonne. */
+@media (max-width: 339px) {
   .grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
   .wide {
     grid-column: auto;
-    grid-row: auto;
   }
+}
 
-  .plate {
-    aspect-ratio: 5 / 4;
+@media (pointer: coarse) {
+  .filter {
+    padding: 12px 16px;
   }
 }
 
@@ -181,7 +264,7 @@
 /* Fiche projet */
 
 .dialog {
-  width: min(1480px, calc(100vw - 2 * var(--gutter)));
+  width: min(1480px, calc(100vw - 2 * var(--gutter-x)));
   max-width: none;
   height: calc(100dvh - 2 * var(--gutter));
   max-height: none;
@@ -192,20 +275,25 @@
   background: var(--page);
   color: var(--ink);
   overflow: hidden;
+  overscroll-behavior: contain;
 }
 
 .dialog::backdrop {
   background: rgba(34, 26, 44, 0.6);
 }
 
+/* Grand écran : l'image à gauche, la barre et le texte à droite. */
 .sheet {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+  grid-template-rows: auto minmax(0, 1fr);
   height: 100%;
 }
 
 .stage {
   position: relative;
+  grid-column: 1;
+  grid-row: 1 / -1;
   display: grid;
   grid-template-rows: minmax(0, 1fr) auto;
   min-height: 0;
@@ -216,6 +304,8 @@
   --inset: clamp(16px, 3vw, 48px);
   position: relative;
   min-height: 0;
+  /* Le balayage horizontal change d'image ; le vertical fait défiler. */
+  touch-action: pan-y;
 }
 
 .frame img {
@@ -224,6 +314,7 @@
   width: calc(100% - 2 * var(--inset));
   height: calc(100% - 2 * var(--inset));
   object-fit: contain;
+  user-select: none;
 }
 
 .arrow {
@@ -240,10 +331,6 @@
   transition: transform 0.15s ease;
 }
 
-.arrow:hover {
-  transform: translateY(-50%) scale(1.08);
-}
-
 .arrowPrev {
   left: 12px;
 }
@@ -255,8 +342,13 @@
 .thumbs {
   display: flex;
   gap: 8px;
-  padding: 0 clamp(16px, 3vw, 48px) clamp(16px, 2vw, 24px);
+  padding: 4px clamp(16px, 3vw, 48px) clamp(16px, 2vw, 24px);
   overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.thumbs::-webkit-scrollbar {
+  display: none;
 }
 
 .thumb {
@@ -276,29 +368,20 @@
   object-fit: cover;
 }
 
-.thumb:hover,
 .thumb[aria-current="true"] {
   opacity: 1;
-}
-
-.thumb[aria-current="true"] {
   outline: 2px solid var(--ink);
   outline-offset: 2px;
 }
 
-.info {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  padding: clamp(20px, 2.4vw, 32px);
-  overflow-y: auto;
-}
-
 .bar {
+  grid-column: 2;
+  grid-row: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: clamp(28px, 5vh, 64px);
+  gap: 12px;
+  padding: clamp(20px, 2.4vw, 32px) clamp(20px, 2.4vw, 32px) 0;
   font-size: 0.88rem;
   font-variant-numeric: tabular-nums;
   color: var(--ink-soft);
@@ -312,9 +395,15 @@
   font-weight: 500;
 }
 
-.close:hover {
-  background: var(--ink);
-  color: var(--page);
+.info {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: clamp(28px, 5vh, 64px) clamp(20px, 2.4vw, 32px) clamp(20px, 2.4vw, 32px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .label {
@@ -370,8 +459,7 @@
   font-weight: 500;
 }
 
-.actions a:first-child,
-.actions a:hover {
+.actions a:first-child {
   background: var(--ink);
   color: var(--page);
 }
@@ -390,18 +478,57 @@
   border-bottom: 1.5px solid transparent;
 }
 
-.pager button:hover {
-  border-bottom-color: var(--ink);
+@media (hover: hover) {
+  .arrow:hover {
+    transform: translateY(-50%) scale(1.08);
+  }
+
+  .thumb:hover {
+    opacity: 1;
+  }
+
+  .close:hover,
+  .actions a:hover {
+    background: var(--ink);
+    color: var(--page);
+  }
+
+  .pager button:hover {
+    border-bottom-color: var(--ink);
+  }
 }
 
-@media (max-width: 860px) {
+@media (pointer: coarse) {
+  .close,
+  .pager button {
+    min-height: 44px;
+  }
+
+  .pager button {
+    padding-inline: 4px;
+  }
+}
+
+/* Téléphone debout, tablette debout : tout s'empile et la barre reste en haut. */
+@media (max-width: 600px), (max-width: 860px) and (orientation: portrait) {
   .dialog {
     overflow-y: auto;
   }
 
   .sheet {
-    display: block;
+    display: flex;
+    flex-direction: column;
     height: auto;
+    min-height: 100%;
+  }
+
+  .bar {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    padding: 10px 16px 10px 20px;
+    background: color-mix(in srgb, var(--page) 92%, transparent);
+    backdrop-filter: blur(10px);
   }
 
   .stage {
@@ -413,20 +540,100 @@
     height: min(56svh, 92vw);
   }
 
-  .close {
-    position: fixed;
-    top: calc(var(--gutter) + 12px);
-    right: calc(var(--gutter) + 12px);
-    z-index: 3;
-    background: var(--page);
-  }
-
   .info {
+    flex: 1;
     overflow: visible;
+    padding: 24px 20px calc(20px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* Téléphone : la fiche prend tout l'écran. */
+@media (max-width: 600px) {
+  .dialog {
+    width: 100vw;
+    height: 100dvh;
+    margin: 0;
+    border-radius: 0;
   }
 
   .bar {
-    margin-bottom: 24px;
+    padding-top: calc(10px + env(safe-area-inset-top, 0px));
+  }
+
+  .frame {
+    --inset: 12px;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    background: color-mix(in srgb, var(--page) 90%, transparent);
+  }
+
+  .arrowPrev {
+    left: 8px;
+  }
+
+  .arrowNext {
+    right: 8px;
+  }
+
+  .thumbs {
+    padding: 4px 16px 16px;
+  }
+
+  .thumb {
+    width: 56px;
+    height: 56px;
+  }
+
+  .subtitle {
+    font-size: 1.02rem;
+  }
+
+  .lead {
+    margin-top: 18px;
+  }
+}
+
+/* Téléphone couché : image et texte côte à côte, en plus serré. */
+@media (orientation: landscape) and (max-height: 520px) {
+  .dialog {
+    height: calc(100dvh - 2 * var(--gutter));
+  }
+
+  .sheet {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  }
+
+  .frame {
+    --inset: 12px;
+  }
+
+  .thumbs {
+    padding: 2px 12px 10px;
+  }
+
+  .thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 9px;
+  }
+
+  .bar {
+    padding: 14px 20px 0;
+  }
+
+  .info {
+    padding: 18px 20px 16px;
+  }
+
+  .info h2 {
+    font-size: 1.6rem;
+  }
+
+  .pager {
+    padding-top: 20px;
   }
 }
 

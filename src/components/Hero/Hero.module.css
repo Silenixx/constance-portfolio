@@ -3,9 +3,9 @@
   display: grid;
   align-content: end;
   min-height: min(calc(100svh - var(--header) - var(--gutter)), 760px);
-  margin: 0 var(--gutter);
+  margin: 0 var(--gutter-x);
   --stage: clamp(200px, 30svh, 300px);
-  padding: var(--stage) calc(var(--pad) - var(--gutter)) var(--edge);
+  padding: var(--stage) calc(var(--pad) - var(--gutter-x)) var(--edge);
   border-radius: var(--radius-lg);
   background: var(--lilac);
   overflow: hidden;
@@ -15,7 +15,7 @@
 .hint {
   position: absolute;
   top: clamp(16px, 2.4vw, 28px);
-  left: calc(var(--pad) - var(--gutter));
+  left: calc(var(--pad) - var(--gutter-x));
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--ink-soft);
@@ -82,8 +82,49 @@
   white-space: nowrap;
 }
 
+/* Téléphone debout : les pièces ont la moitié haute, le nom la moitié basse. */
 @media (max-width: 640px) {
   .hero {
-    --stage: 48svh;
+    --stage: clamp(220px, 44svh, 400px);
+  }
+
+  .foot {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hint {
+    font-size: 0.8rem;
+  }
+
+  .meta span {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Téléphone couché : peu de hauteur, tout doit tenir dans l'écran. */
+@media (orientation: landscape) and (max-height: 520px) {
+  .hero {
+    --stage: 130px;
+    min-height: 0;
+  }
+
+  .hint {
+    top: 12px;
+  }
+
+  .copy h1 {
+    font-size: clamp(2.6rem, 17vh, 5.5rem);
+  }
+
+  .foot {
+    margin-top: 16px;
+  }
+
+  .lead {
+    max-width: 46ch;
+    font-size: 1rem;
   }
 }
